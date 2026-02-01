@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Hofman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        body { 
+            font-family: 'Libre Baskerville', serif; 
+            line-height: 1.8; 
+            margin: 0; 
+            padding: 40px; 
+            color: #1a1a1a;
+            background-color:#9933ff;
+            /*background-color: #e0e0e0; */
+        }
+        
+        .tab-container { 
+            display: flex; 
+            justify-content: flex-end; 
+            margin-bottom: 60px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-button { 
+            font-family: 'Libre Baskerville', serif;
+            padding: 10px 15px; 
+            cursor: pointer; 
+            border: none; 
+            background: none;
+            font-size: 15px; 
+            transition: 0.2s; 
+            color: #666;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-button.name-brand { 
+            margin-right: auto; 
+            font-size: 26px;
+            font-weight: 700;
+            color: #000;
+            padding-left: 30px;
+            border-bottom: none !important;
+        }
+
+        .tab-button:hover { color: #000; }
+
+        .tab-button.active { 
+            color: #000; 
+            font-weight: 700;
+            border-bottom: 2px solid #000; 
+        }
+
+        .tab-button.name-brand.active { border-bottom: none; }
+
+        /* BASE TAB STYLE */
+        .tab-content { 
+            display: none; /* Hidden by default */
+            max-width: 850px; 
+            margin: 0 auto; 
+            animation: fadeIn 0.4s;
+            padding-top: 60px;
+        }
+        
+        /* SHOW TABS */
+        .tab-content.active { display: block; }
+
+       /* This rule ONLY applies to the About section */
+		#about.tab-content.active {
+    		display: grid !important;
+    		grid-template-columns: 1fr auto; /* Text fills space, image stays at its size */
+    		align-items: start;
+    		gap: 60px;
+    
+    		/* These lines break the 'centered' rule for this section only */
+    		max-width: 100% !important; 
+    		width: 100% !important;
+    		margin: 0 !important; 
+		}	
+
+        .about-text { text-align: left; font-size: 15px; line-height: 1.2 !important; padding-left: 30px;}
+        .about-image { width: 100%; max-width: 600px; height: auto; justify-self: end; padding-right: 200px;}
+
+        .home-image { width: 50%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        h2 { font-weight: 700; margin-top: 0; margin-bottom: 20px; }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        @media (max-width: 768px) {
+            #about.tab-content.active { grid-template-columns: 1fr; }
+            .tab-container { justify-content: center; }
+            .tab-button.name-brand { text-align: center; padding-left: 0; }
+        }
+        
+        /* Styling for the CV Expandable Sections */
+		.cv-section {
+    		border-bottom: 1px solid #ccc;
+    		margin-bottom: 10px;
+    		padding-bottom: 10px;
+    		
+		}
+		
+		details summary {
+    		font-weight: 700;
+    		font-size: 30px;
+    		cursor: pointer;
+    		list-style: none; /* Removes default arrow */
+    		display: flex;
+    		justify-content: space-between;
+    		align-items: center;
+    		
+		}
+		
+		/* Custom + and - indicators */
+		details summary::after {
+    		content: "+";
+    		font-size: 20px;
+    		font-weight: normal;
+		}
+		
+		details[open] summary::after {
+    		content: "-";
+		}
+		
+		/* Removes default arrow in Chrome/Safari */
+		details summary::-webkit-details-marker {
+    		display: none;
+		}
+		
+		.cv-content {
+    		padding: 15px 0;
+    		line-height: 1.6;
+		}
+		
+		/* Specifically target the CV section to align it left */
+		#cv.tab-content.active {
+    		margin-left: 0 !important;
+    		margin-right: auto !important;
+    		max-width: 1400px; /* Keeps the text lines from getting too long/hard to read */
+    		text-align: left;
+    		padding-left: 30px;
+    		
+		}
+		
+		/* Ensure the CV list items also stay left-aligned */
+		#cv ul {
+    		padding-left: 20px;
+    		text-align: left;
+		}
+		
+		/* Research Section Grid */
+		#research.tab-content.active {
+    		display: grid !important;
+    		grid-template-columns: 1fr 900px; /* Text takes available space, Menu takes 400px */
+    		gap: 60px;
+    		align-items: start;
+    		max-width: 100% !important;
+    		width: 100% !important;
+    		margin: 0 !important;
+    		
+    		
+		}
+		
+		/* Ensure the text stays left-aligned */
+		.research-text {
+    		text-align: left;
+    		line-height: 1.6;
+    		padding-left: 30px;
+		}
+		
+		/* Container for the menus on the right */
+		.research-menu-container {
+    		display: flex;
+    		flex-direction: column;
+    		gap: 10px;
+    		padding-right: 60px;
+		}
+		
+		/* Styling the menus to look clean on the right */
+		.research-menu-container .cv-section {
+    		border-bottom: 1px solid #ccc;
+    		padding-bottom: 8px;
+    		width: 100%;
+    		
+		}
+		
+		/* Mobile: Stack them vertically when the screen is small */
+		@media (max-width: 900px) {
+    		#research.tab-content.active {
+        		grid-template-columns: 1fr !important;
+    		}
+		}
+		
+		
+</style>
+</head>
+<body>
+
+    <nav class="tab-container">
+        <button class="tab-button name-brand active" onclick="openTab(event, 'home')">ana hofman</button>
+        <button class="tab-button" onclick="openTab(event, 'about')">About</button>
+        <button class="tab-button" onclick="openTab(event, 'cv')">CV</button>
+        <button class="tab-button" onclick="openTab(event, 'research')">Research</button>
+        <button class="tab-button" onclick="openTab(event, 'lectures')">Lectures</button>
+        <button class="tab-button" onclick="openTab(event, 'public')">Public Engagement</button>
+        <button class="tab-button" onclick="openTab(event, 'contact')">Contact</button>
+    </nav>
+
+    <div id="home" class="tab-content active">
+        <img src="image1.jpg" alt="Ana Hofman" class="home-image">
+    </div>
+
+    <div id="about" class="tab-content">
+        <div class="about-text">
+            <h2></h2>
+            <p> <br><br> 
+            Ana Hofman is an ethnomusicologist and anthropologist. She is interested in music, sound and politics in socialist and post-socialist societies, with an emphasis on memory, affect and activism. Her broader research interests include the issues of labour, class, gender, political economy and social movements as interelated with music and sound. In her current project focused on post-Yugoslav activist choirs, she uses both archival and ethnographic methods to examine the politics of memorializations of socialism after Yugoslavia. Concentrated around the concept of strategic amateurism, the project engages with activism, leisure and reconcptualization of the notion of resistance in the present-day conjuncture of neoliberalism and post-socialism in the area of former Yugoslavia.<br><br>
+
+She has published two monographs: Staging Socialist Femininity: Gender Politics and Folklore Performances in Serbia (Brill, 2011) and Music, Affect, Politics: New Lives of Partisan Songs in Slovenia (ZRC 2015), translated into Serbian as New Lives of Partisan Songs (Biblioteka XX vek, 2016).<br><br>
+
+She is a lecturer at ZRC SAZU Postgraduate School, Ljubljana. In Winter semester 2017 she was a visiting lecturer at the University of Performing Arts, Graz, Austria while in Summer semester 2018 she was a Postdoctoral Fulbright Fellow at the Graduate School of City University of New York. She was a visiting fellow at the School of Music, Federal University of Rio de Janeiro, Brazil; Visiting Research Fellow, Centre for Southeastern European Studies, University of Graz, Austria; Visiting researcher at the Russian, East European, and Eurasian Center for Balkan studies, University of Illinois Urbana-Champaign; Visiting Research Fellow at New Europe College, Bucharest, Romania,  Max Plank Institute for Social Anthropology, Halle, Germany and the Department of Music, University of Chicago.<br><br>
+
+She has received the Danubius Mid-Career Award  by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region in 2018.<br><br>
+
+Beyond the academy, she has been actively engaged in shaping equal opportunity policies in Slovenian academic institutions, collaborating with various activist groups in the region and making documentary films. Author of the documentary movie »Solčence zahaja« (2020) <a href="https://www.youtube.com/watch?v=7tGVGAhLG-c" target="_blank"> Trailer.</a>
+                         
+                         </p>
+        </div>
+        <img src="image2.jpg" alt="Ana Hofman" class="about-image">
+    </div>
+
+    
+    
+    	<div id="cv" class="tab-content">
+    	
+    	<p>
+    Current post: <br><br>
+
+	Senior research associate, Institute of Cultural and Memory Studies, Scientific Research Center of the Slovenian Academy of Sciences and Arts, Ljubljana, Slovenia<br>
+	Lecturer, ZRC SAZU Postgraduate School<br>
+	Visiting lecturer, University of Performing Arts, Graz, Austria<br><br>
+
+	Education: <br><br>
+
+	PhD, 2007, Graduate School for Intercultural Studies, University of Nova Gorica, Slovenia Thesis Title: “The Identity Politics and the Female Singers Stage Performances in Niško Polje in the Last Third of the Twentieth Century”<br>
+
+	MA, 2005, Gender studies, Faculty of Political sciences, Belgrade, Serbia<br>
+
+	MPhil, 2004, Faculty of Music, University of Arts, Belgrade, Serbia<br>
+
+	BA, 1999, Faculty of Music, University of Arts, Belgrade, Serbia<br><br>
+	
+	<a href="https://cris.cobiss.net/ecris/si/sl/researcher/31943" target="_blank">SICRIS</a>
+	</p>
+	
+    	<div class="cv-section">
+        	<details>
+            	<summary>Grants and Awards</summary>
+            	<div class="cv-content">
+                	<ul>
+                    	<li>Postdoctoral Fulbright Fellow, Graduate Center of City University of New York, Spring semester 2018.</li>
+                    	<li>Fellowship of the Research Agency of State of Rio de Janeiro (FAPERJ), nov. 2015 - feb. 2016.</li>
+                    	<li>Post-doctoral fellowship of Austrian Agency for International cooperation in Education and Research (OeAD), Visiting Fellow, Centre for Southeastern European Studies, University of Graz, Austria, Nov. 2013 - Mar. 2014.</li>
+                    	<li>Robert Bosch Regional Fellowship, New Europe College, Bucharest, Romania, Max Plank Institute for Social Anthropology, Halle, 2008.</li>
+                    	<li>Ad Futura, Scientific Educational Foundation of Republic of Slovenia, Fellowship for Visiting Researchers, 2007-2008.</li>
+                    	<li>International Library Residence Fellowship, Wenner-Gren Foundation for Anthropological Research, New York, University of Chicago, U.S., 2005.</li>
+                    	<li>Bilateral Fellowship of the Ministry of Education of the Republic of Serbia and the Government of the Republic of Slovenia, 2005.</li>
+                    	<li>Fellowship of the Scientific Research Institute of Slovenian Academy of Sciences and Arts, 2006-2007.</li>
+                    	<li>Fellowship of the Russian, East European, and Eurasian Center for Balkan studies, the University of Illinois Urbana-Champaign, U.S., 2006.</li>
+                    	<li>Danubius Mid-Career Award by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region, 2018</li>
+                    	<li>Barbara Bernard Smith Award of the International Council of Traditional Music (ICTM) for emerging scholar (advanced graduate student or young scholar with recently awarded doctorate), 2007</li>
+                	</ul>
+            	</div>
+        	</details>
+    	</div>
+	
+    	<div class="cv-section">
+        	<details>
+            	<summary>Publications</summary>
+            	<div class="cv-content">
+                	<p><strong></strong></p>
+                	<ul>
+                    	<li>Affect’s Social Lives: Post-Yugoslav Reflections, ZRC Publishing (co-editor with Tanjo Petrović), 2023, <a href="https://omp.zrc-sazu.si/zalozba/catalog/book/2068)" target="_blank"> https://omp.zrc-sazu.si/zalozba/catalog/book/2068)</a></li>
+                    	
+                    	<li>Guest editor of the thematic issue “Resounding antifascism across borders” (with Federico Spinetti and Monika Schoop), Popular Music and Society Volume 44 (2): 2021. <a href="https://www.tandfonline.com/doi/full/10.1080/03007766.2020.1820780" target="_blank">https://www.tandfonline.com/doi/full/10.1080/03007766.2020.1820780 </a> </li>
+                    	
+                    	<li>Disobedient: activist choirs, radical amateurism, and the politics of the past after Yugoslavia. Ethnomusicology 64 (1): 2020, 89-109. <a href="https://www.jstor.org/stable/10.5406/ethnomusicology.64.1.0089" target="_blank"> [COBISS.SI-ID 45944109] </a></li>
+                    	
+                    	<li>The romance with affect  sonic politics in a time of political exaustion. Culture, theory & critique.  Volume 61 (2-3): 2020  Musical Feelings and Affective Politics, <a href="https://www.tandfonline.com/doi/abs/10.1080/14735784.2020.1848603?journalCode=rctc20", target="_blank"> DOI: 10.1080/14735784.2020.1848603. [COBISS.SI-ID 43527427] </a></li>
+                    	
+                    	<li>"We are the partisans of our time": antifascism and post-Yugoslav singing memory activism. Popular music and society. Volume 44 (2): 2021, 157-174. Music and the politics of memory: resounding antifascism across borders, <a href="https://www.tandfonline.com/doi/full/10.1080/03007766.2020.1820782" target="_blank"> DOI: 10.1080/03007766.2020.1820782. [COBISS.SI-ID 35920643] </a></li>
+                    	
+                    	<li>(With Spinetti, Federico and Monika Schoop). Introduction to music and the politics of memory: resounding antifascism across borders. A special issue of Popular music and society Volume 44 (2): 2021, <a href="https://www.tandfonline.com/doi/full/10.1080/03007766.2020.1820780" target="_blank"> DOI: 10.1080/03007766.2020.1820780. [COBISS.SI-ID 35949315]</a> </li>
+                    	
+                    	<li>(With Petrović, Tanja). Rethinking class in socialist Yugoslavia: labor, body, and moral economy. In: The cultural life of capitalism in Yugoslavia: (post)socialism and its other. Ed by. Dijana Jelača, Maša Kolanović and Danijela Lugarič [Basingstoke]: Palgrave Macmillan 2017, 61-80.</li>
+                    	
+                    	<li>Novi život partizanskih pesama [New Lives of Partisan Songs] (Biblioteka XX vek, 226). Beograd: XX vek, 2016. 210 str., ilustr. ISBN 978-86-7562-131-7. <a href="https://bibliotekaxxvek.com/hofman-ana-novi-zivot-partizanskih-pesama/" target="_blank"> [COBISS.SI-ID 223274508] </a></li>
+                    	
+                    	<li>Glasba, politika, afekt: novo življenje partizanskih pesmi v Sloveniji [Music, Politics, Affect: New Lives of Partisan Songs in Slovenia] (Zbirka Kulturni spomin). Ljubljana: Založba ZRC, ZRC SAZU, 2015. 185 str., [8] str. pril., ilustr., note. ISBN 978-961-254-739-4. [COBISS.SI-ID 276198144]</li>
+                    	
+                    	<li>The affective turn in ethnomusicology. Muzikologija, ISSN 1450-9814, 2015, no. 18, str. 35-55. , <a href="https://doiserbia.nb.rs/img/doi/1450-9814/2015/1450-98141518035H.pdf" target="_blank"> doi: 10.2298/MUZ1518035H. [COBISS.SI-ID 39355437] </a></li>
+                    	
+                    	<li>Music (as) labour : professional musicianship, affective labour and gender in socialist Yugoslavia. Ethnomusicology forum. Apr. 2015, vol. 24, no. 1, str. 28-50. ISSN 1741-1912. <a href="https://www.tandfonline.com/doi/abs/10.1080/17411912.2015.1009479" target="_blank"> DOI: 10.1080/17411912.2015.1009479. [COBISS.SI-ID 38201645] </a></li>
+                    	
+                    	<li>Introduction to the co-edited issue "Music, affect and memory politics in post-Yugoslav space". Southeastern Europe, ISSN 0094-4467. [Print ed.], 2015, vol. 39, no. 2, str. 145-164, <a href="https://brill.com/view/journals/seeu/39/2/article-p145_1.xml?language=en" target="_blank"> doi: 10.1163/18763332-03902001. [COBISS.SI-ID 38937389]</a></li>
+                    	
+                	</ul>
+            	</div>
+        	</details>
+    	</div>
+	
+    	<div class="cv-section">
+        	<details>
+            	<summary>Conference Presentations</summary>
+            	<div class="cv-content">
+            	<ul>
+                	<li>Details of recent keynote speeches and presentations...</li>
+                </ul>	
+            	</div>
+        	</details>
+    	</div>
+	
+    	<div class="cv-section">
+        	<details>
+            	<summary>Teaching</summary>
+            	<div class="cv-content">
+            	<ul>
+                	<li>Visiting lecturer, Institute of Ethnomusicology, University of Performing Arts, Graz, Austria</li>
+                	<li>Assistant Professor (2015-), Graduate School of Research Centre of Slovenian Academy of Sciences and Arts</li>
+                	<li>Assistant Professor (2010-), Faculty of Humanities, University of Nova Gorica, Slovenia</li>
+                	<li>Assistant Professor (2002-2005), Faculty of Arts, University of Niš, Serbia</li>
+                </ul>
+            	</div>
+        	</details>
+    	</div>
+	
+    	<div class="cv-section">
+        	<details>
+            	<summary>Languages</summary>
+            	<div class="cv-content">
+            	<ul>
+                	<li>Serbo-Croatian (mother tongue), Slovenian (fluent), English (fluent), French (good), German (basic)</li>
+                </ul>	
+            	</div>
+        	</details>
+    	</div>
+	</div>
+    
+    
+    
+    
+    
+    
+    		<div id="research" class="tab-content">
+    		
+    		<div class="research-text">
+        		<h2></h2>
+        		<p>Your main research description goes here. This text will stay aligned to <br>
+        		  the left margin of the page while the menus sit comfortably to the right.</p>
+    		</div>
+		
+    		<div class="research-menu-container">
+        		
+        		<div class="cv-section">
+            		<details>
+                		<summary>Current Projects</summary>
+                		<div class="cv-content">
+                    		<p>Details about what you are working on right now...</p>
+                		</div>
+            		</details>
+        		</div>
+		
+        		<div class="cv-section">
+            		<details>
+                		<summary>Past Research</summary>
+                		<div class="cv-content">
+                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/protests-art-practices-and-culture-of-memory-in-the-post-yugoslav-context" target="_blank">  Protests, art practices and culture of memory in the post-Yugoslav context </a> (research project • October 1, 2021 - September 30, 2024)</p>
+                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/music-and-politics-in-the-post-yugoslav-space-toward-a-new-paradigm-of-politics" target="_blank"> Music and politics in the post-Yugoslav space: toward a new paradigm of politics of music in the 21st century </a>(July 1, 2018 - June 30, 2021)</p>
+                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/communities-of-practice-for-accelerating-gender-equality-and-institutional" target="_blank"> Communities of Practice for Accelerating Gender Equality and Institutional Change in Research and Innovation across Europe - ACT </a> (framework program • May 1, 2018 - October 31, 2021)</p>
+                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/city-sonic-ecology-urban-soundscapes-of-bern-ljubljana-and-belgrade" target="_blank"> City Sonic Ecology: Urban Soundscapes of Bern, Ljubljana, and Belgrade </a>(international research project • September 1, 2014 - February 28, 2018)</p>
+                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/gendering-the-academy-and-research-combating-career-instability-and-asymetries" target="_blank">  Gendering the Academy and Research: Combating Career Instability and Asymmetries (GARCIA) </a>(framework program • February 1, 2014 - January 31, 2017)</p>
+                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/engaged-past-social-anthropological-analysis-of-transformations-of-popular" target="_blank">  Engaged past: social-anthropological analysis of transformations of popular music in the former Yugoslavia</a> (fundamental research project • August 1, 2013 - July 31, 2016)</p>
+                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/multicultural-heritage-and-nation-state-cases-of-prekmurje-bela-krajina-and" target="_blank"> Multicultural heritage and nation state: cases of Prekmurje, Bela krajina and Primorska </a>(fundamental research project • July 1, 2011 - June 30, 2014)</p>
+                    		<p><a href="https://ikss.zrc-sazu.si/sl/programi-in-projekti/neglected-holocaust-remembering-the-deportation-of-the-jews-in-slovenia" target="_blank"> Neglected Holocaust: Remembering the Deportation of the Jews in Slovenia </a>(July 1, 2010 - June 30, 2012)</p>
+                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/sounds-of-border-music-and-identity-in-slovenian-border-regions" target="_blank"> Sounds of border: Music and identity in Slovenian border regions </a>(postdoctoral research project • May 1, 2009 - April 30, 2011)</p>
+                    		<p><a href="https://isim.zrc-sazu.si/en/programi-in-projekti/professional-bases-strategies-and-theoretical-frameworks-of-education-for" target="_blank"> Professional Bases, Strategies and Theoretical Frameworks of Education for Intercultural Relations and Active Citizenship </a>(applied project • January 1, 2010 - August 31, 2011)</p>
+                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/socialist-heritage-in-comparative-perspective" target="_blank"> Socialist heritage in comparative perspective </a> (bilateral project • January 1, 2009 - December 31, 2010)</p>
+                		</div>
+            		</details>
+        		</div>
+		
+        		<div class="cv-section">
+            		<details>
+                		<summary>Collaborations</summary>
+                		<div class="cv-content">
+                    		<p>European Seminar in Ethnomusicology (Executive Secretary)</p>
+                    		<p>Society for Ethnomusicology (SEM) (Member of the council)</p>
+                    		<p>International Council for Traditional Music (ICTM), study group Music and Minorities, Music and Gender, Applied Ethnomusicology, Music and Dance in Southeastern Europe</p>
+                    		<p>International Association for Southeast European Anthropology (InASEA)</p>
+                    		<p>Association for Culture Studies (ACS)</p>
+                		</div>
+            		</details>
+        		</div>
+		
+    		</div>
+		</div>
+    
+    
+    
+    
+    
+    <div id="lectures" class="tab-content"><h2>Lectures</h2><p>Public outreach...</p></div>
+    
+    
+    
+    <div id="public" class="tab-content"><h2>Public Engagement</h2><p>Performance details...</p></div>
+    
+    <div id="contact" class="tab-content"><h2>Contact</h2>
+    	<p> <i class="fa fa-phone" style="font-size:20px"></i>  +386 1 47 06 528 </p>
+    	<p> <i class="fa fa-envelope" style="font-size:20px"></i>  ana.hofman@zrc-sazu.si </p>
+    	
+    	</div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            
+            // 1. Hide all tabs by removing 'active' class
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove("active");
+            }
+            
+            // 2. Deactivate all buttons
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            // 3. Show current tab by adding 'active' class
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
