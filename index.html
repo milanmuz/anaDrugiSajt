@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Ana Hofman</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
             margin: 0; 
             padding: 40px; 
             color: #1a1a1a;
-            background-color:#9933ff;
+            background-color:#cc66ff;
             /*background-color: #e0e0e0; */
         }
         
@@ -27,22 +28,22 @@
             align-items: center;
             flex-wrap: wrap;
         }
-
+		/*meni slova */
         .tab-button { 
             font-family: 'Libre Baskerville', serif;
             padding: 10px 15px; 
             cursor: pointer; 
             border: none; 
             background: none;
-            font-size: 15px; 
+            font-size: 20px; 
             transition: 0.2s; 
-            color: #666;
+            color: #262626;
             border-bottom: 2px solid transparent;
         }
-
+		/*ime ana hofman */
         .tab-button.name-brand { 
             margin-right: auto; 
-            font-size: 26px;
+            font-size: 30px;
             font-weight: 700;
             color: #000;
             padding-left: 30px;
@@ -84,10 +85,10 @@
     		margin: 0 !important; 
 		}	
 
-        .about-text { text-align: left; font-size: 15px; line-height: 1.2 !important; padding-left: 30px;}
+        .about-text { text-align: left; font-size: 16px; line-height: 1.6 !important; padding-left: 30px;}
         .about-image { width: 100%; max-width: 600px; height: auto; justify-self: end; padding-right: 200px;}
 
-        .home-image { width: 50%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .home-image { width: 70%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         h2 { font-weight: 700; margin-top: 0; margin-bottom: 20px; }
         
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -104,6 +105,10 @@
     		margin-bottom: 10px;
     		padding-bottom: 10px;
     		
+		}
+		
+		.cv-line {
+			border-bottom: 1px solid #ccc;
 		}
 		
 		details summary {
@@ -190,6 +195,70 @@
     		
 		}
 		
+		
+		.video-container {
+    		position: relative;
+    		padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    		height: 0;
+    		overflow: hidden;
+  		}
+  		.video-container iframe {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+  		}
+  		
+  		.preview-card {
+  			display: block;
+  			max-width: 500px;
+  			text-decoration: none;
+  			color: #333;
+  			font-family: sans-serif;
+  			border: 1px solid #e1e8ed;
+  			border-radius: 12px;
+  			overflow: hidden;
+  			transition: background-color 0.2s;
+  			margin: 20px 0;
+			}
+			
+			.preview-card:hover {
+  			background-color: #f5f8fa;
+			}
+			
+			.card-image img {
+  			width: 100%;
+  			height: auto;
+  			display: block;
+  			border-bottom: 1px solid #e1e8ed;
+			}
+			
+			.card-content {
+  			padding: 15px;
+			}
+			
+			.card-domain {
+  			color: #657786;
+  			font-size: 12px;
+  			text-transform: uppercase;
+  			letter-spacing: 1px;
+			}
+			
+			.card-title {
+  			margin: 5px 0;
+  			font-size: 18px;
+  			font-weight: bold;
+			}
+			
+			.card-description {
+  			margin: 0;
+  			font-size: 14px;
+  			color: #5b7083;
+  			line-height: 1.4;
+			}
+		
+		
 		/* Mobile: Stack them vertically when the screen is small */
 		@media (max-width: 900px) {
     		#research.tab-content.active {
@@ -219,17 +288,15 @@
     <div id="about" class="tab-content">
         <div class="about-text">
             <h2></h2>
-            <p> <br><br> 
-            Ana Hofman is an ethnomusicologist and anthropologist. She is interested in music, sound and politics in socialist and post-socialist societies, with an emphasis on memory, affect and activism. Her broader research interests include the issues of labour, class, gender, political economy and social movements as interelated with music and sound. In her current project focused on post-Yugoslav activist choirs, she uses both archival and ethnographic methods to examine the politics of memorializations of socialism after Yugoslavia. Concentrated around the concept of strategic amateurism, the project engages with activism, leisure and reconcptualization of the notion of resistance in the present-day conjuncture of neoliberalism and post-socialism in the area of former Yugoslavia.<br><br>
+            <p>  
+            
+            Ana Hofman is an ethnomusicologist and anthropologist whose work explores the intersections of music, sound, and politics in socialist and post-socialist societies. Her research focuses on memory, affect, and activism, as well as on questions of labour, class, gender, political economy, and social movements as they intersect with musical and sonic practices.<br><br>
+            
+She has published three monographs: <a href="https://brill.com/display/title/16881" target="_blank"> Staging Socialist Femininity: Gender Politics and Folklore Performances in Serbia (Brill, 2011),</a>, <a href="https://omp.zrc-sazu.si/zalozba/catalog/view/920/3903/430" target="_blank"> Music, Affect, Politics: New Lives of Partisan Songs in Slovenia (ZRC 2015),</a>, translated into Serbian as New Lives of Partisan Songs (Biblioteka XX vek, 2016) and <a href="https://academic.oup.com/book/60031/book-pdf/63065529/9780197576281_web.pdf" target="_blank"> Socialism Now: Singing Activism after Yugoslavia (Oxford University Press, 2025).</a><br><br> 
 
-She has published two monographs: Staging Socialist Femininity: Gender Politics and Folklore Performances in Serbia (Brill, 2011) and Music, Affect, Politics: New Lives of Partisan Songs in Slovenia (ZRC 2015), translated into Serbian as New Lives of Partisan Songs (Biblioteka XX vek, 2016).<br><br>
+She has received the Danubius Mid-Career Award by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region in 2018. Beyond academia, she has contributed to equal opportunity policy work in Slovenian research institutions, collaborated with activist initiatives across the region, and worked in documentary filmmaking; she appears in and co-wrote the documentary <a href="https://www.youtube.com/watch?v=7tGVGAhLG-c" target="_blank"> Solčence zahaja (2020), trailer.</a><br><br>
 
-She is a lecturer at ZRC SAZU Postgraduate School, Ljubljana. In Winter semester 2017 she was a visiting lecturer at the University of Performing Arts, Graz, Austria while in Summer semester 2018 she was a Postdoctoral Fulbright Fellow at the Graduate School of City University of New York. She was a visiting fellow at the School of Music, Federal University of Rio de Janeiro, Brazil; Visiting Research Fellow, Centre for Southeastern European Studies, University of Graz, Austria; Visiting researcher at the Russian, East European, and Eurasian Center for Balkan studies, University of Illinois Urbana-Champaign; Visiting Research Fellow at New Europe College, Bucharest, Romania,  Max Plank Institute for Social Anthropology, Halle, Germany and the Department of Music, University of Chicago.<br><br>
-
-She has received the Danubius Mid-Career Award  by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region in 2018.<br><br>
-
-Beyond the academy, she has been actively engaged in shaping equal opportunity policies in Slovenian academic institutions, collaborating with various activist groups in the region and making documentary films. Author of the documentary movie »Solčence zahaja« (2020) <a href="https://www.youtube.com/watch?v=7tGVGAhLG-c" target="_blank"> Trailer.</a>
-                         
+She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). Her recent visiting appointments include Visiting Fellow, Department of Music, King’s College London (Autumn 2025); Fulbright Postdoctoral Fellow, The Graduate Center, City University of New York (2018); and Visiting Lecturer, University of Music and Performing Arts Graz, Austria (Winter semester 2017). She has also held visiting fellowships and research positions at the School of Music, Federal University of Rio de Janeiro (Brazil); the Centre for Southeastern European Studies, University of Graz (Austria); the Russian, East European, and Eurasian Center, University of Illinois Urbana–Champaign (USA); New Europe College (Bucharest, Romania); the Max Planck Institute for Social Anthropology (Halle, Germany); and the Department of Music, University of Chicago (USA).
                          </p>
         </div>
         <img src="image2.jpg" alt="Ana Hofman" class="about-image">
@@ -240,11 +307,16 @@ Beyond the academy, she has been actively engaged in shaping equal opportunity p
     	<div id="cv" class="tab-content">
     	
     	<p>
-    Current post: <br><br>
+    Current position: <br><br>
 
-	Senior research associate, Institute of Cultural and Memory Studies, Scientific Research Center of the Slovenian Academy of Sciences and Arts, Ljubljana, Slovenia<br>
-	Lecturer, ZRC SAZU Postgraduate School<br>
-	Visiting lecturer, University of Performing Arts, Graz, Austria<br><br>
+	Research advisor, Institute of Cultural and Memory Studies, Scientific Research Center of the Slovenian Academy of Sciences and Arts, Ljubljana, Slovenia<br>
+	Associate professor, ZRC SAZU Postgraduate School<br><br>
+	
+	Previous position: <br><br>
+	
+	Visiting lecturer (2018), Institute of Ethnomusicology, University of Performing Arts, Graz, Austria<br>
+	Assistant Professor (2010-2020), Faculty of Humanities, University of Nova Gorica, Slovenia<br>
+	Assistant Professor (2002-2005), Faculty of Arts, University of Niš, Serbia<br><br>
 
 	Education: <br><br>
 
@@ -256,12 +328,14 @@ Beyond the academy, she has been actively engaged in shaping equal opportunity p
 
 	BA, 1999, Faculty of Music, University of Arts, Belgrade, Serbia<br><br>
 	
-	<a href="https://cris.cobiss.net/ecris/si/sl/researcher/31943" target="_blank">SICRIS</a>
+	<a href="https://bib.cobiss.net/biblioweb/biblio/si/slv/cris/29339" target="_blank">SICRIS</a>
 	</p>
-	
+		
+		<div class="cv-line">
+		</div>
     	<div class="cv-section">
         	<details>
-            	<summary>Grants and Awards</summary>
+            	<summary>Fellowships</summary>
             	<div class="cv-content">
                 	<ul>
                     	<li>Postdoctoral Fulbright Fellow, Graduate Center of City University of New York, Spring semester 2018.</li>
@@ -273,12 +347,27 @@ Beyond the academy, she has been actively engaged in shaping equal opportunity p
                     	<li>Bilateral Fellowship of the Ministry of Education of the Republic of Serbia and the Government of the Republic of Slovenia, 2005.</li>
                     	<li>Fellowship of the Scientific Research Institute of Slovenian Academy of Sciences and Arts, 2006-2007.</li>
                     	<li>Fellowship of the Russian, East European, and Eurasian Center for Balkan studies, the University of Illinois Urbana-Champaign, U.S., 2006.</li>
-                    	<li>Danubius Mid-Career Award by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region, 2018</li>
-                    	<li>Barbara Bernard Smith Award of the International Council of Traditional Music (ICTM) for emerging scholar (advanced graduate student or young scholar with recently awarded doctorate), 2007</li>
+                    	
                 	</ul>
             	</div>
         	</details>
     	</div>
+	
+	
+	
+		<div class="cv-section">
+        	<details>
+            	<summary>Awards</summary>
+            	<div class="cv-content">
+            	<ul>
+                	<li>Danubius Mid-Career Award by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region, 2018</li>
+                    	<li>Barbara Bernard Smith Award of the International Council of Traditional Music (ICTM) for emerging scholar (advanced graduate student or young scholar with recently awarded doctorate), 2007</li>
+                </ul>	
+            	</div>
+        	</details>
+    	</div>
+	
+	
 	
     	<div class="cv-section">
         	<details>
@@ -317,10 +406,20 @@ Beyond the academy, she has been actively engaged in shaping equal opportunity p
 	
     	<div class="cv-section">
         	<details>
-            	<summary>Conference Presentations</summary>
+            	<summary>Conferences, workshops, panels organized</summary>
             	<div class="cv-content">
             	<ul>
-                	<li>Details of recent keynote speeches and presentations...</li>
+                	<li>2025</li>
+                	<li>2024  “Anticapitalist Alternatives in Music and Sound.” Organizer of the Panel at the Society for Ethnomusicology annual meeting. </li>
+                	<li>2024   International conference “Post-Yugoslav Historical and Contemporary Reflections on Amateurism, Ljubljana 30-31st of May, Research center of Slovenian Academy of sciences and Arts, Ljubljana.</li>
+                	<li>2022   International conference “Memory culture in flux: from post-Yugoslavia to conceptual problems,” 15-16th of September. Research center of Slovenian Academy of sciences and Arts, Ljubljana.</li>
+                	<li>2020   International Society of Folklore and Ethnology, Working Group for Bodies, Affects, Senses and Emotions (BASE) 3rd workshop in Ljubljana, Slovenia, 4 and 5 June.</li>
+                	<li>2019   “Sound Survivals: Affective Structures of Musical (Self)Care and Solidarity Across Borders,” The 45th International Council for Traditional Music (ICTM) World Conference, 11th to 17th July 2019, Chulalongkorn University, Thailand. </li>
+                	<li>2017   “City Sonic Ecology: Urban Soundscapes of Bern, Ljubljana, and Belgrade,” a roundtable at 20th Congress of the International Musicological Society Musicology: theory and practice, East and West, Tokio, 23 March.</li>
+                	<li>2016   “Gender Mainstreaming in Contemporary Ethnomusicologies,” Gender – Performance – Activism: Transcultural Conversations, 9th Symposium of the Music & Gender Study Group of the International Council for Traditional Music (ICTM), Institute for Music Studies and Center for Global Studies, 13-16 July.</li>
+                	<li>2016    “Occupied!: popular music, capital, state and society,” an organizer of International conference organizer, KUD France Prešeren, Ljubljana, Slovenia, Institute of Cultural and Memory Studies, Department of Ethnology and Cultural Anthropology of the Faculty of Arts, Ljubljana and German Society for Popular Music Studies GfPM, 3-4 June.</li>
+                	<li>2016    “Sonic ecology of Ljubljana,” a organizer, Ljubljana, Municipality of Ljubljana, Institute of Ethnomusicology and Institute of Cultural and Memory Studies, 7 April.</li>
+                	
                 </ul>	
             	</div>
         	</details>
@@ -361,8 +460,8 @@ Beyond the academy, she has been actively engaged in shaping equal opportunity p
     		
     		<div class="research-text">
         		<h2></h2>
-        		<p>Your main research description goes here. This text will stay aligned to <br>
-        		  the left margin of the page while the menus sit comfortably to the right.</p>
+        		<p>Ana Hofman’s research over the past two decades has traced how politics becomes audible—how collective singing become a form of sociopolitical engagement Through long-term, participant-observer involvement with activist singing collectives across the post-Yugoslav region, she has followed how self-organized choirs revive and reinvent repertoires of partisan, revolutionary, and workers’ songs alongside contemporary socially engaged pieces, treating collective singing as a mode of collaboration and political experimentation. This trajectory culminates in the book <i>Socialism Now: Singing Activism after Yugoslavia</i> (Oxford University Press, 2025), where she traces how socialist ideas and lived experiences are being recuperated in the present. She develops the concept of strategic amateurism to grasp how collective singing can organize against the adverse effects of neoliberal capitalism without collapsing into celebratory narratives of “music for social change.”
+</p>
     		</div>
 		
     		<div class="research-menu-container">
@@ -371,7 +470,8 @@ Beyond the academy, she has been actively engaged in shaping equal opportunity p
             		<details>
                 		<summary>Current Projects</summary>
                 		<div class="cv-content">
-                    		<p>Details about what you are working on right now...</p>
+                    		<p>Her current project turns to (post)socialist everyday musical activities, with a particular emphasis on musical amateurism, leisure, and the forms of spatial and temporal dispossession that followed the end of socialism and introduction of neoliebral capitalism. She examines how reorganized labor regimes, the transformation in the forms of ownership of previously public cultural infrastrcuture reconfigure where, when, and with whom music happens—what kinds of time become available, which spaces become (in)accessible, and what forms of sociality are sustained or foreclosed. Moving between ethnographic and archival research, she examines workplace musical sociabilities—particularly musical railway societies—and the ways they have dissolved, transformed, or persisted within the shifting political economies of the post-socialist world.
+</p>
                 		</div>
             		</details>
         		</div>
@@ -380,33 +480,39 @@ Beyond the academy, she has been actively engaged in shaping equal opportunity p
             		<details>
                 		<summary>Past Research</summary>
                 		<div class="cv-content">
-                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/protests-art-practices-and-culture-of-memory-in-the-post-yugoslav-context" target="_blank">  Protests, art practices and culture of memory in the post-Yugoslav context </a> (research project • October 1, 2021 - September 30, 2024)</p>
-                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/music-and-politics-in-the-post-yugoslav-space-toward-a-new-paradigm-of-politics" target="_blank"> Music and politics in the post-Yugoslav space: toward a new paradigm of politics of music in the 21st century </a>(July 1, 2018 - June 30, 2021)</p>
-                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/communities-of-practice-for-accelerating-gender-equality-and-institutional" target="_blank"> Communities of Practice for Accelerating Gender Equality and Institutional Change in Research and Innovation across Europe - ACT </a> (framework program • May 1, 2018 - October 31, 2021)</p>
-                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/city-sonic-ecology-urban-soundscapes-of-bern-ljubljana-and-belgrade" target="_blank"> City Sonic Ecology: Urban Soundscapes of Bern, Ljubljana, and Belgrade </a>(international research project • September 1, 2014 - February 28, 2018)</p>
-                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/gendering-the-academy-and-research-combating-career-instability-and-asymetries" target="_blank">  Gendering the Academy and Research: Combating Career Instability and Asymmetries (GARCIA) </a>(framework program • February 1, 2014 - January 31, 2017)</p>
-                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/engaged-past-social-anthropological-analysis-of-transformations-of-popular" target="_blank">  Engaged past: social-anthropological analysis of transformations of popular music in the former Yugoslavia</a> (fundamental research project • August 1, 2013 - July 31, 2016)</p>
-                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/multicultural-heritage-and-nation-state-cases-of-prekmurje-bela-krajina-and" target="_blank"> Multicultural heritage and nation state: cases of Prekmurje, Bela krajina and Primorska </a>(fundamental research project • July 1, 2011 - June 30, 2014)</p>
-                    		<p><a href="https://ikss.zrc-sazu.si/sl/programi-in-projekti/neglected-holocaust-remembering-the-deportation-of-the-jews-in-slovenia" target="_blank"> Neglected Holocaust: Remembering the Deportation of the Jews in Slovenia </a>(July 1, 2010 - June 30, 2012)</p>
-                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/sounds-of-border-music-and-identity-in-slovenian-border-regions" target="_blank"> Sounds of border: Music and identity in Slovenian border regions </a>(postdoctoral research project • May 1, 2009 - April 30, 2011)</p>
-                    		<p><a href="https://isim.zrc-sazu.si/en/programi-in-projekti/professional-bases-strategies-and-theoretical-frameworks-of-education-for" target="_blank"> Professional Bases, Strategies and Theoretical Frameworks of Education for Intercultural Relations and Active Citizenship </a>(applied project • January 1, 2010 - August 31, 2011)</p>
-                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/socialist-heritage-in-comparative-perspective" target="_blank"> Socialist heritage in comparative perspective </a> (bilateral project • January 1, 2009 - December 31, 2010)</p>
+                		
+                			<p> Project leader:</p>
+                			
+                			<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/music-and-politics-in-the-post-yugoslav-space-toward-a-new-paradigm-of-politics" target="_blank"> "Music and politics in the post-Yugoslav space: toward a new paradigm of politics of music in the 21st century"</a>, Slovenian National Research Agency 2018-2022.</p>
+                			
+                    		<p><a href="" target="_blank"> “Gender in the Academic Sphere: Exploring Inequalities in the Early Stages of Career in a Comparative Perspective”</a>, the bilateral project with the Republic of Serbia, 2020-2022.</p>
+                    		
+                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/communities-of-practice-for-accelerating-gender-equality-and-institutional" target="_blank"> "Communities of Practice for Accelerating Gender Equality and Institutional Change in Research and Innovation across Europe - ACT"</a>, Horizon 2020, a leader of the national team, 2018-2021.</p>
+                    		
+                    		<p><a href="" target="_blank"> “Musical memorialization of war and resistance in comparative perspective: Slovenia and Germany”</a>, bilateral project with the University of Cologne, (Bl-DEl17-19-13) 2017-2019.</p>
+                    		
+                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/city-sonic-ecology-urban-soundscapes-of-bern-ljubljana-and-belgrade" target="_blank"> City Sonic Ecology: Urban Soundscapes of Bern, Ljubljana, and Belgrade </a>, trilateral project Swiss national foundation” (Swiss National Foundation, program SCOPUS), a leader of the national team, 2014-2017.</p>
+                    		
+                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/gendering-the-academy-and-research-combating-career-instability-and-asymetries" target="_blank">  Gendering the Academy and Research: Combating Career Instability and Asymmetries (GARCIA) </a>, Horizon 2020, a leader of the national team, 2014-2017.</p>
+                    		
+                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/sounds-of-border-music-and-identity-in-slovenian-border-regions" target="_blank"> Sounds of border: Music and identity in Slovenian border regions </a>, Slovenian National Research Agency, postdoctoral project, 2009–2011.</p>
+                    		
+                    		<p><a href="" target="_blank"> “Respecting Diversity” – Music and Culture of the Bunjevci and Roma communities</a>, Higher Support Education Programme, Open Society Institute, Budapest, 2001-2004.</p>
+                    		
+                    		<p> Project team member: </p>                    		
+                    		
+                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/protests-art-practices-and-culture-of-memory-in-the-post-yugoslav-context" target="_blank"> "Protests, art practices and culture of memory in the post-Yugoslav context"</a>, leader Gal Kirn, J6-3144, 2021-2025.</p>  
+                    		                  		        		                    		
+                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/engaged-past-social-anthropological-analysis-of-transformations-of-popular" target="_blank"> “Engaged past: socio-anthropological analysis of transformation of popular music in the area of former Yugoslavia”</a>, leader Rajko Muršič, J6-5557, 2013-2016.</p>
+                    		
+                    		<p><a href="" target="_blank"> “Music and ethnic minorities: (trans)cultural dynamics in Slovenia after 1991”</a>, leader Svanibor Pettan, J6-8261, 2017-2020.</p>
+                    		
+                    		
                 		</div>
             		</details>
         		</div>
 		
-        		<div class="cv-section">
-            		<details>
-                		<summary>Collaborations</summary>
-                		<div class="cv-content">
-                    		<p>European Seminar in Ethnomusicology (Executive Secretary)</p>
-                    		<p>Society for Ethnomusicology (SEM) (Member of the council)</p>
-                    		<p>International Council for Traditional Music (ICTM), study group Music and Minorities, Music and Gender, Applied Ethnomusicology, Music and Dance in Southeastern Europe</p>
-                    		<p>International Association for Southeast European Anthropology (InASEA)</p>
-                    		<p>Association for Culture Studies (ACS)</p>
-                		</div>
-            		</details>
-        		</div>
+        		
 		
     		</div>
 		</div>
@@ -415,11 +521,99 @@ Beyond the academy, she has been actively engaged in shaping equal opportunity p
     
     
     
-    <div id="lectures" class="tab-content"><h2>Lectures</h2><p>Public outreach...</p></div>
+    <div id="lectures" class="tab-content">
+    	<h2>Keynote addresses given (selection)</h2>
+    	
+    	<p><a href="https://www.youtube.com/watch?v=VVxm1f9DlqU" target="_blank"> 2025 Keynote at the celebration of the 60th anniversary of the Department for Ethnomusicology, University of Music and Performing Arts, Vienna, 2025</a></p>
+    	
+    	<p><a href="https://mdw.vhx.tv/wissenschaft-und-forschung/videos/mmrc-lecture-2024"> 2024 Music and Minorities Research Centre (MMRC), University of Music and Performing Arts,Vienna, annual keynote lecture for 2024</a></p>
+    	
+    	<p><a href="https://youtu.be/-ZOgOEW3waA" target="_blank"> 2022 Culture&Capitalism Seminar, SOAS, University College London</a></p>
+    	    	
+    	
+    	<p>2025 “Ethnomusicology between Past Remembrance and Future Making, 80 Years After,” Keynote at the 60th anniversary of the Institute of Ethnomusicology, Universty of Music And Performing Arts, Vienna.</p> 
+    	
+		<p>2024 “Between Cultural Labor and Political Struggle: Music and Class.” Annual Lecture of the Research Centre of the Study of Music and Minorities (MMRC), Universty of Music and Performing Arts, Vienna.</p>
+		 
+		<p>2023 “Rethinking Antifascism and Liberation: A Yugoslav Perspective.” Lecture at the Forum Stadtpark, Graz, 8.5.2023.</p>
+		
+		<p>2022 “Is antifascism enough? Singing and listening to contested histories and possible futures,” international conference Music and antifascism: reflections on the past and possibilities in the present", McGill University, Montreal, 7. 7. 2022.</p>
+		 
+ 		<p>2021 “Sound, affect, memory: re-listening to the past.” International conference, Loud memories, turbo folks: mapping of the sounds, images and memories in the post Yugoslav space, Ljubljana 10. 9. 2021</p>
+
+		<p>2018 “Kafana musicians: music labour in Southeastern Europe between stigmatization and glorification,” Keynote lecture at the event Balkan music and culture: sounds of past and present, University of Pittsburgh, Department of Music in Carnegie Mellon University School of Music, Pittsburgh, 23 March.</p>
+		
+		<p>2017 “Sonic regimes of uncertainty: toward affective politics of (self)emancipatory musical alliances,” Keynote Lecture at the Ninth International Doctoral Workshop in   Ethnomusicology, Center for World Music (CWM) at the University of Hildesheim & Hanover University of Music, Drama and Media (HMTMH), 30 June.</p> 
     
     
     
-    <div id="public" class="tab-content"><h2>Public Engagement</h2><p>Performance details...</p></div>
+    
+    
+    </div>
+    
+    
+    
+    <div id="public" class="tab-content">
+    	<h2>Public Engagement</h2>
+    	
+    	<p><a href="https://classicallradio.com/articles/sr_RS/2025/03/19/etnomuzikoloskinja-ana-hofman-kolektivno-dizanje-glasa-je-jedan-od-sinonima-za-protest/" target="_blank"> Etnomuzikološkinja Ana Hofman : kolektivno dizanje glasa je jedan od sinonima za protest. ClassicAllradio.com</a></p>
+    	
+    	
+    	
+    	<a href="https://classicallradio.com/articles/sr_RS/2025/03/19/etnomuzikoloskinja-ana-hofman-kolektivno-dizanje-glasa-je-jedan-od-sinonima-za-protest/" class="preview-card" target="_blank">
+  		<div class="card-image">
+    		<img src="https://classicallradio.com/articles/wp-content/uploads/2025/03/Hofman_photo_231-394x400.jpg" alt="Site Preview">
+  		</div>
+  		<div class="card-content">
+    		<span class="card-domain">https://classicallradio.com/</span>
+    		<h3 class="card-title">ClassicAllradio</h3>
+    		<p class="card-description">Etnomuzikološkinja Ana Hofman : kolektivno dizanje glasa je jedan od sinonima za protest.</p>
+  		</div>
+		</a>
+    	
+    	
+    	
+    	
+    	<p><a href="https://www.jutarnji.hr/kultura/glazba/antropologinja-za-jutarnji-mladi-jasno-osjecaju-razorne-posljedice-globalnog-neoliberalnog-kapitalizma-on-nije-15590721" target="_blank"> Ana Hofman : razgovor s etnomuzikologinjom i antropologinjom. Jutarnji list. [Spletna izd.]. 31. maj 2025, br. 9622, str. 50-51,</a></p>
+    	
+    	
+    	<a href="https://www.jutarnji.hr/kultura/glazba/antropologinja-za-jutarnji-mladi-jasno-osjecaju-razorne-posljedice-globalnog-neoliberalnog-kapitalizma-on-nije-15590721" class="preview-card" target="_blank">
+  		<div class="card-image">
+    		<img src="https://media.jutarnji.hr/images/slike/2025/05/26/f_36897473_1280.jpg" alt="Site Preview">
+  		</div>
+  		<div class="card-content">
+    		<span class="card-domain">https://www.jutarnji.hr/</span>
+    		<h3 class="card-title">Jutarnji list</h3>
+    		<p class="card-description">Ana Hofman : razgovor s etnomuzikologinjom i antropologinjom.</p>
+  		</div>
+		</a>
+    	
+    	
+    	<p>Moj Niš : autor Saša Vesić. Niš: Moj Niš, 2025. 1 spletni vir (1 videodatoteka (52 min, 22 sek)). </p>
+    	
+    	<div class="video-container">
+    	
+    		<iframe 
+  			width="560" 
+  			height="315" 
+  			src="https://www.youtube.com/embed/kjD5O20_T4k" 
+  			title="YouTube video player" 
+  			frameborder="0" 
+  			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  			referrerpolicy="strict-origin-when-cross-origin" 
+  			allowfullscreen>
+			</iframe>
+  		</div>
+    	
+    	<p>Učestvovanje v dokumentarnem filmu Rat i Pesma, Radio-televizija Srbije, RTS Sajt - Zvanični kanal, 2025.</p>
+    	
+    	<iframe width="560" height="315" src="https://www.youtube.com/embed/g57hTlHX6Ak?si=gjaQUcQy6CjpkfFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    	
+    	<p>About documentary "Solčence zahaja":</p>
+    	
+    	<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063676383101%2Fvideos%2F336013642569580%2F&show_text=true&width=560&t=0" width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+    
+    </div>
     
     <div id="contact" class="tab-content"><h2>Contact</h2>
     	<p> <i class="fa fa-phone" style="font-size:20px"></i>  +386 1 47 06 528 </p>
