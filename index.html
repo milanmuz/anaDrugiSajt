@@ -17,9 +17,15 @@
             margin: 0; 
             padding: 40px; 
             color: #1a1a1a;
-            background-color:#cc66ff;
+            background-color:#efccff;
             /*background-color: #e0e0e0; */
+            
         }
+        
+        div {
+  		text-align: justify;
+  		text-justify: inter-word;
+		}
         
         .tab-container { 
             display: flex; 
@@ -71,6 +77,12 @@
         
         /* SHOW TABS */
         .tab-content.active { display: block; }
+        
+        #public.tab-content.active {
+    		
+            max-width: 2000px; 
+            
+		}	
 
        /* This rule ONLY applies to the About section */
 		#about.tab-content.active {
@@ -85,7 +97,7 @@
     		margin: 0 !important; 
 		}	
 
-        .about-text { text-align: left; font-size: 16px; line-height: 1.6 !important; padding-left: 30px;}
+        .about-text { text-align: left; font-size: 16px; line-height: 1.6 !important; padding-left: 30px; text-align: justify; text-justify: inter-word;}
         .about-image { width: 100%; max-width: 600px; height: auto; justify-self: end; padding-right: 200px;}
 
         .home-image { width: 70%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
@@ -177,6 +189,8 @@
     		text-align: left;
     		line-height: 1.6;
     		padding-left: 30px;
+    		text-align: justify; 
+    		text-justify: inter-word;
 		}
 		
 		/* Container for the menus on the right */
@@ -212,15 +226,17 @@
   		
   		.preview-card {
   			display: block;
-  			max-width: 500px;
+  			/*max-width: 500px;*/
+  			width: 560px;
+  			height: 315px;
   			text-decoration: none;
-  			color: #333;
+  			color: #000;
   			font-family: sans-serif;
   			border: 1px solid #e1e8ed;
   			border-radius: 12px;
   			overflow: hidden;
   			transition: background-color 0.2s;
-  			margin: 20px 0;
+  			margin: 10px 0;
 			}
 			
 			.preview-card:hover {
@@ -228,14 +244,14 @@
 			}
 			
 			.card-image img {
-  			width: 100%;
-  			height: auto;
+  			width: 560px;
+  			height: 200px;
   			display: block;
   			border-bottom: 1px solid #e1e8ed;
 			}
 			
 			.card-content {
-  			padding: 15px;
+  			padding-left: 10px;
 			}
 			
 			.card-domain {
@@ -254,10 +270,30 @@
 			.card-description {
   			margin: 0;
   			font-size: 14px;
-  			color: #5b7083;
+  			color: #000;
   			line-height: 1.4;
 			}
-		
+			
+			#more {display: none;}
+			
+			* {
+  			box-sizing: border-box;
+			}
+			
+			/* Create two equal columns that floats next to each other */
+			.column {
+  			float: left;
+  			width: 50%;
+  			padding: 100px;
+  			 
+			}
+			
+			/* Clear floats after the columns */
+			.row:after {
+  			content: "";
+  			display: table;
+  			clear: both;
+			}
 		
 		/* Mobile: Stack them vertically when the screen is small */
 		@media (max-width: 900px) {
@@ -272,7 +308,7 @@
 <body>
 
     <nav class="tab-container">
-        <button class="tab-button name-brand active" onclick="openTab(event, 'home')">ana hofman</button>
+        <button class="tab-button name-brand active" onclick="openTab(event, 'home')">Ana Hofman</button>
         <button class="tab-button" onclick="openTab(event, 'about')">About</button>
         <button class="tab-button" onclick="openTab(event, 'cv')">CV</button>
         <button class="tab-button" onclick="openTab(event, 'research')">Research</button>
@@ -294,10 +330,11 @@
             
 She has published three monographs: <a href="https://brill.com/display/title/16881" target="_blank"> Staging Socialist Femininity: Gender Politics and Folklore Performances in Serbia (Brill, 2011),</a>, <a href="https://omp.zrc-sazu.si/zalozba/catalog/view/920/3903/430" target="_blank"> Music, Affect, Politics: New Lives of Partisan Songs in Slovenia (ZRC 2015),</a>, translated into Serbian as New Lives of Partisan Songs (Biblioteka XX vek, 2016) and <a href="https://academic.oup.com/book/60031/book-pdf/63065529/9780197576281_web.pdf" target="_blank"> Socialism Now: Singing Activism after Yugoslavia (Oxford University Press, 2025).</a><br><br> 
 
-She has received the Danubius Mid-Career Award by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region in 2018. Beyond academia, she has contributed to equal opportunity policy work in Slovenian research institutions, collaborated with activist initiatives across the region, and worked in documentary filmmaking; she appears in and co-wrote the documentary <a href="https://www.youtube.com/watch?v=7tGVGAhLG-c" target="_blank"> Solčence zahaja (2020), trailer.</a><br><br>
+She has received the Danubius Mid-Career Award by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region in 2018. Beyond academia, she has contributed to equal opportunity policy work in Slovenian research institutions, collaborated with activist initiatives across the region, and worked in documentary filmmaking; she appears in and co-wrote the documentary <a href="https://www.youtube.com/watch?v=7tGVGAhLG-c" target="_blank"> Solčence zahaja (2020), trailer.</a><br>
 
-She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). Her recent visiting appointments include Visiting Fellow, Department of Music, King’s College London (Autumn 2025); Fulbright Postdoctoral Fellow, The Graduate Center, City University of New York (2018); and Visiting Lecturer, University of Music and Performing Arts Graz, Austria (Winter semester 2017). She has also held visiting fellowships and research positions at the School of Music, Federal University of Rio de Janeiro (Brazil); the Centre for Southeastern European Studies, University of Graz (Austria); the Russian, East European, and Eurasian Center, University of Illinois Urbana–Champaign (USA); New Europe College (Bucharest, Romania); the Max Planck Institute for Social Anthropology (Halle, Germany); and the Department of Music, University of Chicago (USA).
+<span id="dots"></span><span id="more"><br>She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). Her recent visiting appointments include Visiting Fellow, Department of Music, King’s College London (Autumn 2025); Fulbright Postdoctoral Fellow, The Graduate Center, City University of New York (2018); and Visiting Lecturer, University of Music and Performing Arts Graz, Austria (Winter semester 2017). She has also held visiting fellowships and research positions at the School of Music, Federal University of Rio de Janeiro (Brazil); the Centre for Southeastern European Studies, University of Graz (Austria); the Russian, East European, and Eurasian Center, University of Illinois Urbana–Champaign (USA); New Europe College (Bucharest, Romania); the Max Planck Institute for Social Anthropology (Halle, Germany); and the Department of Music, University of Chicago (USA).</span>
                          </p>
+                         <button onclick="myFunction()" id="myBtn">Read more</button>
         </div>
         <img src="image2.jpg" alt="Ana Hofman" class="about-image">
     </div>
@@ -307,18 +344,34 @@ She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). H
     	<div id="cv" class="tab-content">
     	
     	<p>
-    Current position: <br><br>
+    	
+    <h1>Current position:</h1> 
+    
 
 	Research advisor, Institute of Cultural and Memory Studies, Scientific Research Center of the Slovenian Academy of Sciences and Arts, Ljubljana, Slovenia<br>
 	Associate professor, ZRC SAZU Postgraduate School<br><br>
 	
-	Previous position: <br><br>
+	<div class="cv-line">
+		</div>
+	<br>
+	
+	<h1>Previous position:</h1> 
+	
+	
 	
 	Visiting lecturer (2018), Institute of Ethnomusicology, University of Performing Arts, Graz, Austria<br>
 	Assistant Professor (2010-2020), Faculty of Humanities, University of Nova Gorica, Slovenia<br>
 	Assistant Professor (2002-2005), Faculty of Arts, University of Niš, Serbia<br><br>
-
-	Education: <br><br>
+	
+	<div class="cv-line">
+		</div>
+	
+	<br>
+	
+	<h1>Education:</h1> 
+	
+	
+	
 
 	PhD, 2007, Graduate School for Intercultural Studies, University of Nova Gorica, Slovenia Thesis Title: “The Identity Politics and the Female Singers Stage Performances in Niško Polje in the Last Third of the Twentieth Century”<br>
 
@@ -545,53 +598,59 @@ She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). H
 		
 		<p>2017 “Sonic regimes of uncertainty: toward affective politics of (self)emancipatory musical alliances,” Keynote Lecture at the Ninth International Doctoral Workshop in   Ethnomusicology, Center for World Music (CWM) at the University of Hildesheim & Hanover University of Music, Drama and Media (HMTMH), 30 June.</p> 
     
-    
-    
-    
-    
     </div>
     
     
     
     <div id="public" class="tab-content">
-    	<h2>Public Engagement</h2>
-    	
-    	<p><a href="https://classicallradio.com/articles/sr_RS/2025/03/19/etnomuzikoloskinja-ana-hofman-kolektivno-dizanje-glasa-je-jedan-od-sinonima-za-protest/" target="_blank"> Etnomuzikološkinja Ana Hofman : kolektivno dizanje glasa je jedan od sinonima za protest. ClassicAllradio.com</a></p>
     	
     	
+    	<div class="row">
     	
-    	<a href="https://classicallradio.com/articles/sr_RS/2025/03/19/etnomuzikoloskinja-ana-hofman-kolektivno-dizanje-glasa-je-jedan-od-sinonima-za-protest/" class="preview-card" target="_blank">
-  		<div class="card-image">
-    		<img src="https://classicallradio.com/articles/wp-content/uploads/2025/03/Hofman_photo_231-394x400.jpg" alt="Site Preview">
-  		</div>
-  		<div class="card-content">
-    		<span class="card-domain">https://classicallradio.com/</span>
-    		<h3 class="card-title">ClassicAllradio</h3>
-    		<p class="card-description">Etnomuzikološkinja Ana Hofman : kolektivno dizanje glasa je jedan od sinonima za protest.</p>
-  		</div>
-		</a>
+    	 	<div class="column" style="font-size:120%">
+   		
+   		 		<h2>Printed media</h2>
     	
+    			<p><a href="https://classicallradio.com/articles/sr_RS/2025/03/19/etnomuzikoloskinja-ana-hofman-kolektivno-dizanje-glasa-je-jedan-od-sinonima-za-protest/" target="_blank"> Etnomuzikološkinja Ana Hofman : kolektivno dizanje glasa je jedan od sinonima za protest. ClassicAllradio.com</a></p>    	
     	
-    	
-    	
-    	<p><a href="https://www.jutarnji.hr/kultura/glazba/antropologinja-za-jutarnji-mladi-jasno-osjecaju-razorne-posljedice-globalnog-neoliberalnog-kapitalizma-on-nije-15590721" target="_blank"> Ana Hofman : razgovor s etnomuzikologinjom i antropologinjom. Jutarnji list. [Spletna izd.]. 31. maj 2025, br. 9622, str. 50-51,</a></p>
-    	
-    	
-    	<a href="https://www.jutarnji.hr/kultura/glazba/antropologinja-za-jutarnji-mladi-jasno-osjecaju-razorne-posljedice-globalnog-neoliberalnog-kapitalizma-on-nije-15590721" class="preview-card" target="_blank">
-  		<div class="card-image">
-    		<img src="https://media.jutarnji.hr/images/slike/2025/05/26/f_36897473_1280.jpg" alt="Site Preview">
-  		</div>
-  		<div class="card-content">
-    		<span class="card-domain">https://www.jutarnji.hr/</span>
-    		<h3 class="card-title">Jutarnji list</h3>
-    		<p class="card-description">Ana Hofman : razgovor s etnomuzikologinjom i antropologinjom.</p>
-  		</div>
-		</a>
+    			<a href="https://classicallradio.com/articles/sr_RS/2025/03/19/etnomuzikoloskinja-ana-hofman-kolektivno-dizanje-glasa-je-jedan-od-sinonima-za-protest/" class="preview-card" target="_blank">
+  				<div class="card-image" style="">
+    				<img src="http://classicallradio.com/articles/wp-content/uploads/2018/01/vintage-camac-decak-1.jpg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://classicallradio.com/</span>
+    				<h3 class="card-title">ClassicAllradio</h3>
+    				<p class="card-description">Etnomuzikološkinja Ana Hofman : kolektivno dizanje glasa je jedan od sinonima za protest.</p>
+  				</div>
+				</a>
     	
     	
-    	<p>Moj Niš : autor Saša Vesić. Niš: Moj Niš, 2025. 1 spletni vir (1 videodatoteka (52 min, 22 sek)). </p>
     	
-    	<div class="video-container">
+    	
+    			<p><a href="https://www.jutarnji.hr/kultura/glazba/antropologinja-za-jutarnji-mladi-jasno-osjecaju-razorne-posljedice-globalnog-neoliberalnog-kapitalizma-on-nije-15590721" target="_blank"> Ana Hofman : razgovor s etnomuzikologinjom i antropologinjom. Jutarnji list. [Spletna izd.]. 31. maj 2025, br. 9622, str. 50-51,</a></p>    	
+    	
+    			<a href="https://www.jutarnji.hr/kultura/glazba/antropologinja-za-jutarnji-mladi-jasno-osjecaju-razorne-posljedice-globalnog-neoliberalnog-kapitalizma-on-nije-15590721" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://www.jutarnji.hr/templates/site/images/svgs/__jutarnji.svg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://www.jutarnji.hr/</span>
+    				<h3 class="card-title">Jutarnji list</h3>
+    				<p class="card-description">Ana Hofman : razgovor s etnomuzikologinjom i antropologinjom.</p>
+  				</div>
+				</a>
+    	
+    	
+    	
+    	
+    	</div>
+    	
+    	<div class="column" style="font-size:120%">
+    		<h2>Videos</h2>
+    	
+    	
+    		<p>Moj Niš : autor Saša Vesić. Niš: Moj Niš, 2025. 1 spletni vir (1 videodatoteka (52 min, 22 sek)). </p>
+    	    	
     	
     		<iframe 
   			width="560" 
@@ -603,17 +662,24 @@ She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). H
   			referrerpolicy="strict-origin-when-cross-origin" 
   			allowfullscreen>
 			</iframe>
-  		</div>
+  		
     	
-    	<p>Učestvovanje v dokumentarnem filmu Rat i Pesma, Radio-televizija Srbije, RTS Sajt - Zvanični kanal, 2025.</p>
+    		<p>Učestvovanje v dokumentarnem filmu Rat i Pesma, Radio-televizija Srbije, RTS Sajt - Zvanični kanal, 2025.</p>
     	
-    	<iframe width="560" height="315" src="https://www.youtube.com/embed/g57hTlHX6Ak?si=gjaQUcQy6CjpkfFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    		<iframe width="560" height="315" src="https://www.youtube.com/embed/g57hTlHX6Ak?si=gjaQUcQy6CjpkfFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     	
-    	<p>About documentary "Solčence zahaja":</p>
+    		<p>About documentary "Solčence zahaja":</p>
     	
-    	<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063676383101%2Fvideos%2F336013642569580%2F&show_text=true&width=560&t=0" width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+    		<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063676383101%2Fvideos%2F336013642569580%2F&show_text=true&width=560&t=0" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
     
-    </div>
+    	</div>
+    
+    </div> 
+    
+    </div> 
+    
+    
+    
     
     <div id="contact" class="tab-content"><h2>Contact</h2>
     	<p> <i class="fa fa-phone" style="font-size:20px"></i>  +386 1 47 06 528 </p>
@@ -641,6 +707,22 @@ She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). H
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
+        
+        function myFunction() {
+  		var dots = document.getElementById("dots");
+  		var moreText = document.getElementById("more");
+  		var btnText = document.getElementById("myBtn");
+		
+  		if (dots.style.display === "none") {
+    		dots.style.display = "inline";
+    		btnText.innerHTML = "Read more"; 
+    		moreText.style.display = "none";
+  		} else {
+    		dots.style.display = "none";
+    		btnText.innerHTML = "Read less"; 
+    		moreText.style.display = "inline";
+  		}
+		}
     </script>
 </body>
 </html>
