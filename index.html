@@ -84,6 +84,14 @@
             
 		}	
 
+
+		#lectures.tab-content.active {
+    				
+            		max-width: 2000px; 
+            		
+				}	
+
+
        /* This rule ONLY applies to the About section */
 		#about.tab-content.active {
     		display: grid !important;
@@ -101,6 +109,7 @@
         .about-image { width: 100%; max-width: 600px; height: auto; justify-self: end; padding-right: 200px;}
 
         .home-image { width: 70%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        h1 { position: absolute; left: 140px; font-size: 24px; font-weight: 600; margin-top: 0; margin-bottom: 20px; }
         h2 { font-weight: 700; margin-top: 0; margin-bottom: 20px; }
         
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -125,7 +134,7 @@
 		
 		details summary {
     		font-weight: 700;
-    		font-size: 30px;
+    		font-size: 23px;
     		cursor: pointer;
     		list-style: none; /* Removes default arrow */
     		display: flex;
@@ -227,7 +236,7 @@
   		.preview-card {
   			display: block;
   			/*max-width: 500px;*/
-  			width: 560px;
+  			width: 400px;
   			height: 315px;
   			text-decoration: none;
   			color: #000;
@@ -244,7 +253,7 @@
 			}
 			
 			.card-image img {
-  			width: 560px;
+  			width: 400px;
   			height: 200px;
   			display: block;
   			border-bottom: 1px solid #e1e8ed;
@@ -275,16 +284,30 @@
 			}
 			
 			#more {display: none;}
+			#moreBook {display: none;}
+			#moreSpec {display: none;}
+			#moreArt {display: none;}
+			#moreChap {display: none;}
 			
 			* {
   			box-sizing: border-box;
 			}
 			
-			/* Create two equal columns that floats next to each other */
+			
 			.column {
   			float: left;
   			width: 50%;
   			padding: 100px;
+  			text-align: left;
+  			 
+			}
+			
+			/* Create two equal columns that floats next to each other */
+			.columnPublic {
+  			float: left;
+  			width: 30%;
+  			padding: 100px;
+  			text-align: left;
   			 
 			}
 			
@@ -318,7 +341,7 @@
     </nav>
 
     <div id="home" class="tab-content active">
-        <img src="image1.jpg" alt="Ana Hofman" class="home-image">
+        <img src="FAVORIT.jpg" alt="Ana Hofman" class="home-image">
     </div>
 
     <div id="about" class="tab-content">
@@ -355,7 +378,7 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
 		</div>
 	<br>
 	
-	<h2>Previous position:</h2> 
+	<h2>Previous positions:</h2> 
 	
 	
 	
@@ -391,6 +414,7 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
             	<summary>Fellowships</summary>
             	<div class="cv-content">
                 	<ul>
+                		<li>King’s College London, Research Fellow, September-October, 2025</li>
                     	<li>Postdoctoral Fulbright Fellow, Graduate Center of City University of New York, Spring semester 2018.</li>
                     	<li>Fellowship of the Research Agency of State of Rio de Janeiro (FAPERJ), nov. 2015 - feb. 2016.</li>
                     	<li>Post-doctoral fellowship of Austrian Agency for International cooperation in Education and Research (OeAD), Visiting Fellow, Centre for Southeastern European Studies, University of Graz, Austria, Nov. 2013 - Mar. 2014.</li>
@@ -422,35 +446,139 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
 	
 	
 	
+		<div class="cv-section">
+        	<details>
+            	<summary>Academic service and leadership</summary>
+            	<div class="cv-content">
+            	<ul>
+                	<li>A member of editorial board of the book series <a href="https://link.springer.com/series/60335" target="_blank"> Palgrave Studies in the Philosophy of Popular Culture, 2025. </a> </li>
+                    <li>ERC Panel member for Starting Grant (SH5, SH8), 2021.</li>
+                    <li>Board member of the Society for Ethnomusicology, 2020.</li>
+                    <li>A member of editorial board of the journal Artefact, Faculty of Arts, University of Niš, Serbia, 2016.</li>
+                    <li>President of the scientific board of the Institute of cultural and memory studies, 2014.</li>
+                    <li>Executive secretary and Treasurer of the European Seminar in Ethnomusicology (ESEM), 2012.</li>
+                    <li> Co-founder and director of the NGO “Centre for Balkan music research” Belgrade, 2011.</li>
+                    <li>A member of International Association for Southeast European Anthropology (InASEA), 2006.</li>
+                    <li>A member of International Council of Traditional Music (ICTM) and Society for Ethnomusicology (SEM), 2005.</li> 
+                </ul>	
+            	</div>
+        	</details>
+    	</div>
+	
+	
+	
     	<div class="cv-section">
         	<details>
             	<summary>Publications</summary>
             	<div class="cv-content">
                 	<p><strong></strong></p>
                 	<ul>
-                    	<li>Affect’s Social Lives: Post-Yugoslav Reflections, ZRC Publishing (co-editor with Tanjo Petrović), 2023, <a href="https://omp.zrc-sazu.si/zalozba/catalog/book/2068)" target="_blank"> https://omp.zrc-sazu.si/zalozba/catalog/book/2068)</a></li>
+                		<p><strong>Books</strong></p>
+                	
+                    	<li>Socialism, Now! Music Activism after Yugoslavia, Oxford University Press, 2025.</li>
                     	
-                    	<li>Guest editor of the thematic issue “Resounding antifascism across borders” (with Federico Spinetti and Monika Schoop), Popular Music and Society Volume 44 (2): 2021. <a href="https://www.tandfonline.com/doi/full/10.1080/03007766.2020.1820780" target="_blank">https://www.tandfonline.com/doi/full/10.1080/03007766.2020.1820780 </a> </li>
+                    	<li>New Lives of Partisan Songs [Novi život partizanskih pesama] in Serbian Language, Belgrade: Biblioteka XX, 2016.</li>
                     	
-                    	<li>Disobedient: activist choirs, radical amateurism, and the politics of the past after Yugoslavia. Ethnomusicology 64 (1): 2020, 89-109. <a href="https://www.jstor.org/stable/10.5406/ethnomusicology.64.1.0089" target="_blank"> [COBISS.SI-ID 45944109] </a></li>
+                    	<li>Music, Politics, Affect: New Lives of Partisan Songs in Slovenia  [Glasba, politika, afekt: novo življenje partizanskih pesmi v Sloveniji], in Slovenian Language, Kulturni spomin (Culture History Library, 3). Ljubljana: ZRC SAZU, 2015.</li>
                     	
-                    	<li>The romance with affect  sonic politics in a time of political exaustion. Culture, theory & critique.  Volume 61 (2-3): 2020  Musical Feelings and Affective Politics, <a href="https://www.tandfonline.com/doi/abs/10.1080/14735784.2020.1848603?journalCode=rctc20", target="_blank"> DOI: 10.1080/14735784.2020.1848603. [COBISS.SI-ID 43527427] </a></li>
+                    	<span id="dotsBook"></span><span id="moreBook">
                     	
-                    	<li>"We are the partisans of our time": antifascism and post-Yugoslav singing memory activism. Popular music and society. Volume 44 (2): 2021, 157-174. Music and the politics of memory: resounding antifascism across borders, <a href="https://www.tandfonline.com/doi/full/10.1080/03007766.2020.1820782" target="_blank"> DOI: 10.1080/03007766.2020.1820782. [COBISS.SI-ID 35920643] </a></li>
+                    	<li>Socijalistička ženskost na sceni: Rodne politike u muzičkim praksama jugoistočne Srbije [Serbian translation], Belgrade: Evoluta, 2012.</li>
+                    	<li>Staging Socialist Femininity: Gender Politics and Folklore Performance in Serbia (Balkan Studies Library, 1). Leiden, Boston: Brill, 2011.</li>
+                    	<li>(with Oto Luthar) Sounds and Tastes of Second Slovenia: a Guide to the Space of Intercultural Encounters [Zvoki in okusi druge Slovenije: vodič po prostorih medkulturnih srečevanj], in Slovenian, Ljubljana: Založba ZRC, 2013.</li>
                     	
-                    	<li>(With Spinetti, Federico and Monika Schoop). Introduction to music and the politics of memory: resounding antifascism across borders. A special issue of Popular music and society Volume 44 (2): 2021, <a href="https://www.tandfonline.com/doi/full/10.1080/03007766.2020.1820780" target="_blank"> DOI: 10.1080/03007766.2020.1820780. [COBISS.SI-ID 35949315]</a> </li>
+                    	</span>
+                         
+                        <button onclick="booksButton()" id="bookBtn">Read more</button>
                     	
-                    	<li>(With Petrović, Tanja). Rethinking class in socialist Yugoslavia: labor, body, and moral economy. In: The cultural life of capitalism in Yugoslavia: (post)socialism and its other. Ed by. Dijana Jelača, Maša Kolanović and Danijela Lugarič [Basingstoke]: Palgrave Macmillan 2017, 61-80.</li>
+                    	<p><strong>Book editor</strong></p>
                     	
-                    	<li>Novi život partizanskih pesama [New Lives of Partisan Songs] (Biblioteka XX vek, 226). Beograd: XX vek, 2016. 210 str., ilustr. ISBN 978-86-7562-131-7. <a href="https://bibliotekaxxvek.com/hofman-ana-novi-zivot-partizanskih-pesama/" target="_blank"> [COBISS.SI-ID 223274508] </a></li>
+                    	<li>The Praxis of Activist Singing, Pula: Juraj Dobrila University of Pula, Centre for Cultural and Historical Research of Socialism, Ljubljana: ZRC Publishing, 2024.</li>
+                    	<li>(with Tanja Petrović) Affect’s Social Lives: Post-Yugoslav Reflections, ZRC Publishing, 2023.</li>
+                    	<li> Academia (without) Youth: Gendering Early Stages of Scientific Career [Znanost (brez) mladih: zgodnje stopnje znanstvene kariere skozi perspektivno spola, in Slovenian Language], Ljubljana: ZRC SAZU publishing, 2017.</li>
                     	
-                    	<li>Glasba, politika, afekt: novo življenje partizanskih pesmi v Sloveniji [Music, Politics, Affect: New Lives of Partisan Songs in Slovenia] (Zbirka Kulturni spomin). Ljubljana: Založba ZRC, ZRC SAZU, 2015. 185 str., [8] str. pril., ilustr., note. ISBN 978-961-254-739-4. [COBISS.SI-ID 276198144]</li>
+                    	<p><strong>Special Issues of Journals Edited</strong></p>
                     	
-                    	<li>The affective turn in ethnomusicology. Muzikologija, ISSN 1450-9814, 2015, no. 18, str. 35-55. , <a href="https://doiserbia.nb.rs/img/doi/1450-9814/2015/1450-98141518035H.pdf" target="_blank"> doi: 10.2298/MUZ1518035H. [COBISS.SI-ID 39355437] </a></li>
+                    	<li>Guest editor of the thematic issue (with Federico Spinetti and Monika Schoop) “Music and the Politics of Memory: Resounding Antifascism Across Borders” Popular Music and Society (44. 2; 2021)</li>
+                    	<li>Guest editor of the thematic issue (with Mojca Kovačič) “Sounds of Minorities” (2019).</li>
+                    	<li> Guest editor of the thematic issue "Music, affect and memory politics in post-Yugoslav space," Southeastern Europe 39 (2), 2015.</li>
                     	
-                    	<li>Music (as) labour : professional musicianship, affective labour and gender in socialist Yugoslavia. Ethnomusicology forum. Apr. 2015, vol. 24, no. 1, str. 28-50. ISSN 1741-1912. <a href="https://www.tandfonline.com/doi/abs/10.1080/17411912.2015.1009479" target="_blank"> DOI: 10.1080/17411912.2015.1009479. [COBISS.SI-ID 38201645] </a></li>
+                    	<span id="dotsSpec"></span><span id="moreSpec">
                     	
-                    	<li>Introduction to the co-edited issue "Music, affect and memory politics in post-Yugoslav space". Southeastern Europe, ISSN 0094-4467. [Print ed.], 2015, vol. 39, no. 2, str. 145-164, <a href="https://brill.com/view/journals/seeu/39/2/article-p145_1.xml?language=en" target="_blank"> doi: 10.1163/18763332-03902001. [COBISS.SI-ID 38937389]</a></li>
+                    	<li>Guest editor of the thematic issue of Southeastern Europe 39 (2)."Music, affect and memory politics in post- Yugoslav space", 2015.</li>
+                    	<li>Editor-in-Chief of International Journal of Euro-Mediterranean Studies (IJEMS), 2008-2009.</li>
+
+                    	</span>
+                    	
+                    	<button onclick="specButton()" id="specBtn">Read more</button>
+                    	
+                    	<p><strong>Articles in Journals</strong></p>
+                    	
+                    	<li> "Revolution is learned faster than culture" : on the amateur-professional relationship in the artistic legacies of the People’s Liberation Struggle. Anthropos  56:1, 2024.  <a href="https://www.hippocampus.si/ISSN/2630-4082/56.79-95.pdf" target="_blank"> (pdf) </a> <a href="https://www.dlib.si/details/URN:NBN:SI:doc-YQHA2FZB" target="_blank">  Digitalna knjižnica Slovenije - dLib.si, DOI: 10.26493/2630-4082.56.79-95. [COBISS.SI-ID 220617731] </a> </li>
+                    	<li>"We are the partisans of our time” antifascism and post-Yugoslav singing memory activism. Popular music and society. Thematic issue Music and the politics of memory: resounding antifascism across borders, 44/2, 2021.</li>
+                    	<li>(with Spinetti, Federico, Schoop, Monika E.). Introduction to music and the politics of memory: resounding antifascism across borders. Popular music and society (published online, thematic issue Music and the politics of memory: resounding antifascism across borders, 44/2, 2021.</li>
+                    	
+                    	<span id="dotsArt"></span><span id="moreArt">
+                    	
+                    	<li>“The romance with affect: sonic politics in a time of political exhaustion.” Culture, theory & critique, thematic issue Musical Feelings and Affective Politics, edited by Desei Stephans, Anaar and Nicole Reisnour, 2020. </li>
+                    	<li>Disobedient: activist choirs, radical amateurism and the politics of the past after Yugoslavia, Ethnomusicology, 64/1, 2020.</li>
+                    	<li>(with Srđan Atanasovski). “Sonic memory interventions against politics of urban silencing.” Muzikologija 22: 89-101, 2017.</li>
+                    	<li>“Music (as) Labour: Professional musicianship, affective labour and gender in socialist Yugoslavia.” Ethnomusicology Forum 24 (1): 28-50, 2015.</li>
+                    	<li>“The affective turn in ethnomusicology.” Muzikologija 18: 35-55, 2015.</li>
+                    	<li>“Music Heritage in Relocation: the ‘Guča na Krasu’ Festival.” Dve domovini 39: 73-87, 2014.</li>
+                    	<li>“Lepa Brena: (Re)politization of musical memories on Yugoslavia,” Glasnik Etnografskog instituta, 2012, 60 (1): 21-32, 2012.</li>
+                    	<li>“Socialist stage: politics of place in musical performance.” New sound 36 (2): 120-134, 2010.</li>
+                    	<li>“We go on the road and sing: memories on rural women on socialism in Serbia” [Idemo si od put, idemo si, pevamo : sećanja seoskih žena na socijalizam u Srbiji]. Genero br. 14: 2010, str. 49-67, 2010.</li>
+                    	<li>Mettre en scène la modernisation la politique culturelle socialiste et les manifestations folkloriques en Serbie.” Études balkaniques 17: 189-208, 2010.</li>
+                    	<li>“Kafana singers: Popular music, gender and subjectivity in the cultural space of socialist Yugoslavia.” Narodna umjetnost 47 (1): 141-161, 2010.</li>
+                    	<li>“Performing modernization: socialist culture policy and folklore manifestations in Serbia,” Revue des études Sud-est européennes 47 (1-4): 293-313, 2009.</li>
+                    	<li>(with Ceribašić, Naila, and Ljerka Vidić Rasmussen). “Post-Yugoslavian ethnomusicologies in sialogue.” Yearbook for traditional music 40: 33-45, 2008.</li>
+                    	<li>“Performing socialist femininity: the role of public manifestations in the construction and representation of gender in Southeastern Serbia.” Facta Universitatis, Philos. Sociol. Psychol. 7 (1): 43-54, 2008.</li>
+                    	<li>(with Iva Tarabić) “Roma musicians as tradesmen in urban cultural environments.” Ethnologia Balkanica 10: 305-316, 2007.</li>
+                    	
+                    	
+                    	</span>
+                    	
+                    	<button onclick="artButton()" id="artBtn">Read more</button>
+                    	
+                    	<p><strong>Book chapters</strong></p>
+                    	
+                    	<li>Through Forests and Stages: Amateurism and Professionalism in Partisan Cultural Production” (in Serbo-Croatian:”Po šumama i binama: odnos amaterizma i profesionalizma u partizanskom stvaralaštvu”) In: Partisan Art: How to Think, How to Remember. Up & Underground, no. 47/48 (2025).</li>
+                    	<li>“We Shall Not Surrender Our Land to Fascists: On the Political Potentials and Limits of Aestheticizing the Memory of the People’s Liberation Struggle” (in Serbo-Croatian Mi ne damo zemlje naše da je gaze fašisti: o političkim potencijalima i ograničenjima estetizacije sećanja na NOB)  In: Antifascism. Lada Duraković and Andrea Matošević (eds). Zagreb: Srednja Europa; Pula: Juraj Dobrila University of Pula, 2023.</li>
+                    	<li> “Silenced registers of ethnomusicological academic labor under neoliberalism.” In: Transforming ethnomusicology. Volume II, Political, social & ecological issues. Edited by Beverley Diamond and, Salwa El-Shawan Castelo-branco, New York: Oxford University Press, 2021. pp 83-95.</li>
+                    	
+						<span id="dotsChap"></span><span id="moreChap">
+						
+						<li>“Music labor, class, and socialist entrepreneurship: Yugoslav self-management revisited.” In: Made in Yugoslavia: studies in popular music. Danijela Š.  Beard and Ljerka V. Rasmussen (eds).  Routledge global popular music series. New York and London: Routledge.</li>
+						<li>“New sincerity and radical idealism in post-Yugoslav memory practices.” In: The media of memory. Maruša Pušnik and Oto Luthar (eds). Paderborn: F. Schöningh, the Brill-Group, cop. 2020.</li>
+						<li>“Mapping "inconvenient" music heritage.” In: SWEERS, Britta ROSS, Sarah (eds.) Cultural mapping and musical diversity. Sheffield (UK); Bristol (CT): Equinox, Transcultural music studies. 2020.</li>
+						<li>“Music labor, class, and socialist entrepreneurship: Yugoslav self-management revisited.” In BEARD, Danijela Š. (ur.), RASMUSSEN, Ljerka V. (eds.) Made in Yugoslavia : studies in popular music. New York (NY); London [i. e.] Abingdon (Oxon): Routledge, 2020.</li>
+						<li> New sincerity and radical idealism in post-Yugoslav memory practices. In PUŠNIK, Maruša (ur.), LUTHAR, Oto (ur.). The media of memory. Paderborn: Brill-Group, 2020.</li>
+						<li> “Micronarratives of Music and (Self-)censorship in Former Yugoslavia.” In: Oxford Handbook for Music Censorship, Patricia Hall (ed.), New York (NY): Oxford University Press, 259-273, 2018.</li>
+						<li>(with Tanja Petrović). “Rethinking Class in Socialist Yugoslavia: Labor, Body, and Moral Economy.” In: The cultural life of capitalism in Yugoslavia: (post)socialism and its other. Dijana Jelača, Maša Kolanović and Danijela Lugarić (eds.). Basingstoke: Palgrave Macmillan, 61-80, 2017.</li>
+						<li>(with Rosa Reitsamer). “Popular Music, Memory and Heritage: a Conversation between Ana Hofman and Rosa Reitsamer.” In: Best of IsaScience: 2013-2016- an interdisciplinary collection of essays on music and arts. Ursula Hemetek (ed.). Wien: Hollitzer, 149-159, 2017.</li>
+						<li>(with Martin Pogačar). “Partisan resistance today?: the music of the national liberation struggle and social engagement.” In: Sounds of Attraction: Yugoslav and Post-Yugoslav Popular Music, Miha Kozorog and Rajko Muršič (eds.). Ljubljana: Ljubljana University Press, Faculty of Arts, 21-39, 2017.</li>
+						<li>“Music, affect and memory politics in post-Yugoslav spac” In: Musik als Medium der Erinnerung: Gedächtnis - Geschichte - Gegenwart, (Musik und Klangkultur). Lena Nieper and Julian Schmitz (eds.), Bielefeld: Transcript, 235-258, 2016.</li>
+						<li> “Folk music as a folk enemy: music censorship in socialist Yugoslavia.” In: Popular music in Eastern Europe: breaking the Cold War paradigm, (Pop music, culture and identity), Ewa Mazierska (ed.). London: Palgrave Macmillan, 129-147, 2016.</li>
+						<li>(with Polona Sitar) “‘Buy me a silk skirt Mileʼ: celebrity culture, gender and social positioning in socialist Yugoslavia.” In: Social inequalities and discontent in Yugoslav socialism, (Southeast European studies). Rory Archer, Igor Duda, Paul Stubbs (eds), London: Routledge, 155-172, 2016.</li>
+						<li>“Singing the nation: the statehood day of Serbia after 2000.” In: An Contribution to the development of societies in transitions, Duško Vejnović and Nebojša Macanović (eds.), Banja Luka: Evropski defendologija centar za naučna, politička, ekonomska, socijalna, bezbjedonosna, sociološka i kriminološka istraživanja, 956-965, 2015.</li>
+						<li>“Who is afraid of Schund? Music censorship in Yugoslavia.” In: Socijalizam na klupi: Jugoslovensko društvo očima nove postjugoslavenske humanistike [Socialism on bench: Yugoslav society through the lenses of new post-Yugoslav humanities], Lada Duraković, Andrea Matošević (eds.), Pula, Zagreb: Srednja Evropa, 280-316, 2013.</li>
+						<li>“Experiencing socialism: female singers in Southeastern Serbia.” In: Negotiating normality: Everyday lives in socialist institutions, Daniela Koleva (ed.), New Brunswick and London: Transaction Publishers, 103-120, 2012.</li>
+						<li>“Musical borderlands between national and transnational musical spaces.” In: Musical traditions: discovery, inquiry, interpretation and application. Pál Richter (ed.). Budapest: HAS, Research Centre for the Humanities, 404-421, 2012.</li>
+						<li>“Questioning socialist folklorization: Beltinci folklore festival in the Slovenian borderland of Prekmurje. In: Audiovisual media and identity issues in Southeastern Europe, Eckehard Pistrick, Nicola Scaldaferri and Gretel Schwörer (eds.), Newcastle: Cambridge Scholar Publishing, 238-257, 2011.</li>
+						<li>“Maintaining the distance, othering the Subaltern: rethinking ethnomusicologists' engagement in advocacy and social justice. In: Applied ethnomusicology: Historical and contemporary approaches, Klisala R. Harrison, Elizabeth Mackinlay and Svanibor Pettan (eds.), Newcastle: Cambridge Scholars, 22-35, 2010.</li>
+						<li>“Storytelling in ethnomusicological research: case study of the female singers in Southeastern Serbia. In: (Auto)biography as a musicological discourse (Musicological studies, Collection of papers, vol. 3), Tatjana Marković and Vesna Mikić (eds.). Beograd: Fakultet muzičke umetnosti: Signature, 97-107, 2010.</li>
+						<li>“‘When we were walking down the road and singing’: rural women's memories of ‘socialism in Serbia.” In: Gender politics and everyday life in state socialist Eastern and Central Europe. 1st ed., Shana Penn and Jill Massino (eds.), New York: Palgrave Macmillan, 185-197, 2009.</li>
+						<li>“Sounding transition: musical practices as everyday experience in post-socialist Serbia.” In: First symposium of ICTM Study group for music and dance in Southeastern Europe: 4-8 september 2008, Struga R. Macedonia, Velika Stoykova Serafimovska (ed.), Skopje: Macedonian Composers's Association - SOKOM, 9-19, 2009.</li>
+						<li>“Yugomania: music and nostalgic practice on the internet.” In: Voices of the weak: music and minorities, Zuzana Jurková and Lee Bidgood (eds.), Praha: NGO Slovo 21: Faculty of Humanities of Charles University, 216-225, 2009.</li>
+						<li>“Music of ‘working people’: musical folklore and the creation of Yugoslav identity. “In: Musical Folklore as a Vehicle? Mirjana Veselinović-Hofman (ed.). Belgrade: Signature: Faculty of Music, 59-67, 2008.</li>
+						<li>“Gender in the dominant ethonmusicological narratives in Serbia” [Rod u dominantnim etnomuzikološkim narativima u Srbiji.] In: Međunarodni naučni skup Dani Vlade S. Miloševića, Dimitrije O. Golemović (ed.). Banja Luka: Akademija umjetnosti: Muzikološko društvo Republike Srpske, 243-262. 2008.</li>
+						
+						
+						</span>
+                    	
+                    	<button onclick="chapButton()" id="chapBtn">Read more</button>
+                    	
                     	
                 	</ul>
             	</div>
@@ -462,16 +590,16 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
             	<summary>Conferences, workshops, panels organized</summary>
             	<div class="cv-content">
             	<ul>
-                	<li>2025</li>
-                	<li>2024  “Anticapitalist Alternatives in Music and Sound.” Organizer of the Panel at the Society for Ethnomusicology annual meeting. </li>
-                	<li>2024   International conference “Post-Yugoslav Historical and Contemporary Reflections on Amateurism, Ljubljana 30-31st of May, Research center of Slovenian Academy of sciences and Arts, Ljubljana.</li>
-                	<li>2022   International conference “Memory culture in flux: from post-Yugoslavia to conceptual problems,” 15-16th of September. Research center of Slovenian Academy of sciences and Arts, Ljubljana.</li>
-                	<li>2020   International Society of Folklore and Ethnology, Working Group for Bodies, Affects, Senses and Emotions (BASE) 3rd workshop in Ljubljana, Slovenia, 4 and 5 June.</li>
-                	<li>2019   “Sound Survivals: Affective Structures of Musical (Self)Care and Solidarity Across Borders,” The 45th International Council for Traditional Music (ICTM) World Conference, 11th to 17th July 2019, Chulalongkorn University, Thailand. </li>
-                	<li>2017   “City Sonic Ecology: Urban Soundscapes of Bern, Ljubljana, and Belgrade,” a roundtable at 20th Congress of the International Musicological Society Musicology: theory and practice, East and West, Tokio, 23 March.</li>
-                	<li>2016   “Gender Mainstreaming in Contemporary Ethnomusicologies,” Gender – Performance – Activism: Transcultural Conversations, 9th Symposium of the Music & Gender Study Group of the International Council for Traditional Music (ICTM), Institute for Music Studies and Center for Global Studies, 13-16 July.</li>
-                	<li>2016    “Occupied!: popular music, capital, state and society,” an organizer of International conference organizer, KUD France Prešeren, Ljubljana, Slovenia, Institute of Cultural and Memory Studies, Department of Ethnology and Cultural Anthropology of the Faculty of Arts, Ljubljana and German Society for Popular Music Studies GfPM, 3-4 June.</li>
-                	<li>2016    “Sonic ecology of Ljubljana,” a organizer, Ljubljana, Municipality of Ljubljana, Institute of Ethnomusicology and Institute of Cultural and Memory Studies, 7 April.</li>
+                	<li>  “Music and the Commons: The Lost Resources and Infrastructures,” Organizer of the Panel at the Society for Ethnomusicology annual meeting, 2025. </li>
+                	<li>  “Anticapitalist Alternatives in Music and Sound.” Organizer of the Panel at the Society for Ethnomusicology annual meeting, 2024. </li>
+                	<li>   International conference “Post-Yugoslav Historical and Contemporary Reflections on Amateurism, Ljubljana 30-31st of May, Research center of Slovenian Academy of sciences and Arts, Ljubljana, 2024.</li>
+                	<li>   International conference “Memory culture in flux: from post-Yugoslavia to conceptual problems,” 15-16th of September. Research center of Slovenian Academy of sciences and Arts, Ljubljana, 2022.</li>
+                	<li>   International Society of Folklore and Ethnology, Working Group for Bodies, Affects, Senses and Emotions (BASE) 3rd workshop in Ljubljana, Slovenia, 4 and 5 June, 2020.</li>
+                	<li>   “Sound Survivals: Affective Structures of Musical (Self)Care and Solidarity Across Borders,” The 45th International Council for Traditional Music (ICTM) World Conference, 11th to 17th July 2019, Chulalongkorn University, Thailand, 2019. </li>
+                	<li>   “City Sonic Ecology: Urban Soundscapes of Bern, Ljubljana, and Belgrade,” a roundtable at 20th Congress of the International Musicological Society Musicology: theory and practice, East and West, Tokio, 23 March, 2017.</li>
+                	<li>   “Gender Mainstreaming in Contemporary Ethnomusicologies,” Gender – Performance – Activism: Transcultural Conversations, 9th Symposium of the Music & Gender Study Group of the International Council for Traditional Music (ICTM), Institute for Music Studies and Center for Global Studies, 13-16 July, 2016.</li>
+                	<li>    “Occupied!: popular music, capital, state and society,” an organizer of International conference organizer, KUD France Prešeren, Ljubljana, Slovenia, Institute of Cultural and Memory Studies, Department of Ethnology and Cultural Anthropology of the Faculty of Arts, Ljubljana and German Society for Popular Music Studies GfPM, 3-4 June, 2016.</li>
+                	<li>    “Sonic ecology of Ljubljana,” a organizer, Ljubljana, Municipality of Ljubljana, Institute of Ethnomusicology and Institute of Cultural and Memory Studies, 7 April, 2016.</li>
                 	
                 </ul>	
             	</div>
@@ -533,34 +661,35 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
             		<details>
                 		<summary>Past Research</summary>
                 		<div class="cv-content">
+                		<ul>
                 		
-                			<p> Project leader:</p>
+                			<p style="font-size:110%;"> <b>Project leader:</b></p>
                 			
-                			<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/music-and-politics-in-the-post-yugoslav-space-toward-a-new-paradigm-of-politics" target="_blank"> "Music and politics in the post-Yugoslav space: toward a new paradigm of politics of music in the 21st century"</a>, Slovenian National Research Agency 2018-2022.</p>
+                			<li> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/music-and-politics-in-the-post-yugoslav-space-toward-a-new-paradigm-of-politics" target="_blank"> "Music and politics in the post-Yugoslav space: toward a new paradigm of politics of music in the 21st century"</a>, Slovenian National Research Agency 2018-2022. <a href="https://musicaffectpolitics.zrc-sazu.si" target="_blank"> Project's webpage, </a> <a href="https://www.youtube.com/channel/UCQJkgDPonHeH4k1FnG5Wz8Q" target="_blank"> Youtube channel</a> </li>
                 			
-                    		<p><a href="" target="_blank"> “Gender in the Academic Sphere: Exploring Inequalities in the Early Stages of Career in a Comparative Perspective”</a>, the bilateral project with the Republic of Serbia, 2020-2022.</p>
+                    		<li><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/gender-in-academia-fighting-inequality-at-the-early-career-stage" target="_blank"> “Gender in the Academic Sphere: Exploring Inequalities in the Early Stages of Career in a Comparative Perspective”</a>, the bilateral project with the Republic of Serbia, 2020-2022.</li>
                     		
-                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/communities-of-practice-for-accelerating-gender-equality-and-institutional" target="_blank"> "Communities of Practice for Accelerating Gender Equality and Institutional Change in Research and Innovation across Europe - ACT"</a>, Horizon 2020, a leader of the national team, 2018-2021.</p>
+                    		<li> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/communities-of-practice-for-accelerating-gender-equality-and-institutional" target="_blank"> "Communities of Practice for Accelerating Gender Equality and Institutional Change in Research and Innovation across Europe - ACT"</a>, Horizon 2020, a leader of the national team, 2018-2021.<a href="https://act-on-gender.eu/" target="_blank"> Project's webpage</a> </li>
                     		
-                    		<p><a href="" target="_blank"> “Musical memorialization of war and resistance in comparative perspective: Slovenia and Germany”</a>, bilateral project with the University of Cologne, (Bl-DEl17-19-13) 2017-2019.</p>
+                    		<li><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/musical-memorializations-of-war-and-resistance-in-comparative-perspective" target="_blank"> “Musical memorialization of war and resistance in comparative perspective: Slovenia and Germany”</a>, bilateral project with the University of Cologne, (Bl-DEl17-19-13) 2017-2019.</li>
                     		
-                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/city-sonic-ecology-urban-soundscapes-of-bern-ljubljana-and-belgrade" target="_blank"> City Sonic Ecology: Urban Soundscapes of Bern, Ljubljana, and Belgrade </a>, trilateral project Swiss national foundation” (Swiss National Foundation, program SCOPUS), a leader of the national team, 2014-2017.</p>
+                    		<li> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/city-sonic-ecology-urban-soundscapes-of-bern-ljubljana-and-belgrade" target="_blank"> City Sonic Ecology: Urban Soundscapes of Bern, Ljubljana, and Belgrade </a>, trilateral project Swiss national foundation” (Swiss National Foundation, program SCOPUS), a leader of the national team, 2014-2017. <a href="https://soundsofljubljana.zrc-sazu.si/citysonicecology/" target="_blank"> Project's webpage</a> </li>
                     		
-                    		<p> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/gendering-the-academy-and-research-combating-career-instability-and-asymetries" target="_blank">  Gendering the Academy and Research: Combating Career Instability and Asymmetries (GARCIA) </a>, Horizon 2020, a leader of the national team, 2014-2017.</p>
+                    		<li> <a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/gendering-the-academy-and-research-combating-career-instability-and-asymetries" target="_blank">  Gendering the Academy and Research: Combating Career Instability and Asymmetries (GARCIA) </a>, Horizon 2020, a leader of the national team, 2014-2017. <a href="https://cordis.europa.eu/project/id/611737/reporting" target="_blank"> Project's webpage</a> </li>
                     		
-                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/sounds-of-border-music-and-identity-in-slovenian-border-regions" target="_blank"> Sounds of border: Music and identity in Slovenian border regions </a>, Slovenian National Research Agency, postdoctoral project, 2009–2011.</p>
+                    		<li><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/sounds-of-border-music-and-identity-in-slovenian-border-regions" target="_blank"> Sounds of border: Music and identity in Slovenian border regions </a>, Slovenian National Research Agency, postdoctoral project, 2009–2011.</li>
                     		
-                    		<p><a href="" target="_blank"> “Respecting Diversity” – Music and Culture of the Bunjevci and Roma communities</a>, Higher Support Education Programme, Open Society Institute, Budapest, 2001-2004.</p>
+                    		<li><a href="" target="_blank"> “Respecting Diversity” – Music and Culture of the Bunjevci and Roma communities</a>, Higher Support Education Programme, Open Society Institute, Budapest, 2001-2004.</li>
                     		
-                    		<p> Project team member: </p>                    		
+                    		<p style="font-size:110%;"> <b>Project team member: </b></p>                    		
                     		
-                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/protests-art-practices-and-culture-of-memory-in-the-post-yugoslav-context" target="_blank"> "Protests, art practices and culture of memory in the post-Yugoslav context"</a>, leader Gal Kirn, J6-3144, 2021-2025.</p>  
+                    		<li><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/protests-art-practices-and-culture-of-memory-in-the-post-yugoslav-context" target="_blank"> "Protests, art practices and culture of memory in the post-Yugoslav context"</a>, leader Gal Kirn, J6-3144, 2021-2025. <a href="https://www.ff.uni-lj.si/en/protests-art-practices-and-culture-memory-post-yugoslav-context" target="_blank"> Project's webpage</a> </li>  
                     		                  		        		                    		
-                    		<p><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/engaged-past-social-anthropological-analysis-of-transformations-of-popular" target="_blank"> “Engaged past: socio-anthropological analysis of transformation of popular music in the area of former Yugoslavia”</a>, leader Rajko Muršič, J6-5557, 2013-2016.</p>
+                    		<li><a href="https://ikss.zrc-sazu.si/en/programi-in-projekti/engaged-past-social-anthropological-analysis-of-transformations-of-popular" target="_blank"> “Engaged past: socio-anthropological analysis of transformation of popular music in the area of former Yugoslavia”</a>, leader Rajko Muršič, J6-5557, 2013-2016. <a href="https://transyuformator.wordpress.com/about-the-project/" target="_blank"> Project's webpage</a> </li>
                     		
-                    		<p><a href="" target="_blank"> “Music and ethnic minorities: (trans)cultural dynamics in Slovenia after 1991”</a>, leader Svanibor Pettan, J6-8261, 2017-2020.</p>
+                    		<li><a href="" target="_blank"> “Music and ethnic minorities: (trans)cultural dynamics in Slovenia after 1991”</a>, leader Svanibor Pettan, J6-8261, 2017-2020.</li>
                     		
-                    		
+                    	</ul>	
                 		</div>
             		</details>
         		</div>
@@ -575,28 +704,63 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     
     
     <div id="lectures" class="tab-content">
-    	<h2>Keynote addresses given (selection)</h2>
+    
+    	<h1>Keynote addresses given (selection)</h1>
     	
-    	<p><a href="https://www.youtube.com/watch?v=VVxm1f9DlqU" target="_blank"> 2025 Keynote at the celebration of the 60th anniversary of the Department for Ethnomusicology, University of Music and Performing Arts, Vienna, 2025</a></p>
+    	<div class="row">
     	
-    	<p><a href="https://mdw.vhx.tv/wissenschaft-und-forschung/videos/mmrc-lecture-2024"> 2024 Music and Minorities Research Centre (MMRC), University of Music and Performing Arts,Vienna, annual keynote lecture for 2024</a></p>
+    	 	<div class="column" style="font-size:120%">
     	
-    	<p><a href="https://youtu.be/-ZOgOEW3waA" target="_blank"> 2022 Culture&Capitalism Seminar, SOAS, University College London</a></p>
+    	<p><a href="https://www.youtube.com/watch?v=VVxm1f9DlqU" target="_blank"> Keynote at the celebration of the 60th anniversary of the Department for Ethnomusicology, University of Music and Performing Arts, Vienna, 2025</a><br> Title: “Ethnomusicology between Past Remembrance and Future Making, 80 Years After”</p>
     	    	
     	
-    	<p>2025 “Ethnomusicology between Past Remembrance and Future Making, 80 Years After,” Keynote at the 60th anniversary of the Institute of Ethnomusicology, Universty of Music And Performing Arts, Vienna.</p> 
+    		<iframe 
+  			width="560" 
+  			height="315" 
+  			src="https://www.youtube.com/embed/VVxm1f9DlqU" 
+  			title="YouTube video player" 
+  			frameborder="0" 
+  			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  			referrerpolicy="strict-origin-when-cross-origin" 
+  			allowfullscreen>
+			</iframe>
     	
-		<p>2024 “Between Cultural Labor and Political Struggle: Music and Class.” Annual Lecture of the Research Centre of the Study of Music and Minorities (MMRC), Universty of Music and Performing Arts, Vienna.</p>
-		 
-		<p>2023 “Rethinking Antifascism and Liberation: A Yugoslav Perspective.” Lecture at the Forum Stadtpark, Graz, 8.5.2023.</p>
-		
-		<p>2022 “Is antifascism enough? Singing and listening to contested histories and possible futures,” international conference Music and antifascism: reflections on the past and possibilities in the present", McGill University, Montreal, 7. 7. 2022.</p>
-		 
- 		<p>2021 “Sound, affect, memory: re-listening to the past.” International conference, Loud memories, turbo folks: mapping of the sounds, images and memories in the post Yugoslav space, Ljubljana 10. 9. 2021</p>
-
-		<p>2018 “Kafana musicians: music labour in Southeastern Europe between stigmatization and glorification,” Keynote lecture at the event Balkan music and culture: sounds of past and present, University of Pittsburgh, Department of Music in Carnegie Mellon University School of Music, Pittsburgh, 23 March.</p>
-		
-		<p>2017 “Sonic regimes of uncertainty: toward affective politics of (self)emancipatory musical alliances,” Keynote Lecture at the Ninth International Doctoral Workshop in   Ethnomusicology, Center for World Music (CWM) at the University of Hildesheim & Hanover University of Music, Drama and Media (HMTMH), 30 June.</p> 
+    	
+    	
+    	<p><a href="https://mdw.vhx.tv/wissenschaft-und-forschung/videos/mmrc-lecture-2024"> Music and Minorities Research Centre (MMRC), University of Music and Performing Arts,Vienna, annual keynote lecture for 2024</a> Title: “Between Cultural Labor and Political Struggle: Music and Class.” </p>
+    	
+    	<iframe title="vimeo-player" src="https://player.vimeo.com/video/1012657703?h=8a18654259" width="560" height="315" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+    		
+    	
+    	<p><a href="https://youtu.be/-ZOgOEW3waA" target="_blank"> Culture&Capitalism Seminar, SOAS, University College London, 2022. </a> Title: “Aesthetic solidarities in a devastating world : the im/possibilities of communal forms of life after socialism” </p>
+    	
+    	<iframe width="560" height="315" src="https://www.youtube.com/embed/-ZOgOEW3waA?si=8leRd3dEkSdcfUHr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    	
+    	
+    	<p><a href="https://www.youtube.com/watch?v=OKr0saA09Jk" target="_blank"> "Participation at the online discussion “Série Música em Debate,”Laboratório de Etnomusicologia, Federal University of Rio de Janeiro UFRJ. 2020."</a></p>
+    	
+    	    	
+    	    	</div>
+    	    	<div class="column" style="font-size:120%">
+    	
+    	<p><b>Lecture at Music Department, King’s College London, 2025.</b><br><a href="https://www.kcl.ac.uk/events/strategic-amateurism-self-organized-choirs-and-the-legacies-of-socialist-cultural-commons" target="_blank"> Title: “Strategic Amateurism: Self-Organized Choirs and the Legacies of Socialist Cultural Commons"</a></p>
+    	
+    	<p><b>Keynote at the Finnish national symposium of music scholars, 2024.</b><br><a href="https://sites.uef.fi/symposium-for-music-scholars-2024/?lang=en" target="_blank"> Title: “Music Activism in a Devastating World Sounds of political survival or survival of the political sounds?</a></p>
+    	
+    	<p><b>Keynote at the Summer Academy of University of Music and Performing Arts Vienna, Reichenau, 2023.</b><br><a href="https://www.isa-music.org/wp-content/uploads/2023/06/Programme_Overview_isaScience2023.pdf" target="_blank"> Title: “Musical Leisure: Sonic Ties against Commodification and Exploitative Forms of Life”</a></p>
+    	
+    	<p><b>Keynote at the international conference Music and antifascism: reflections on the past and possibilities in the present", McGill University, 2022.</b><br><a href="https://musicandantifascism.wordpress.com/" target="_blank"> Title: “Is antifascism enough? Singing and listening to contested histories and possible futures.” </a></p>
+    	
+    	<p><b>Keynote at International conference, Loud memories, turbo folks: mapping of the sounds, images and memories in the post Yugoslav space, 2021.</b><br><a href="https://bienale.si/en/news/loud-memories-turbo-people-mapping-of-sound-image-and-remembrance-in-the-post-yugoslav-space/" target="_blank"> Title: “Sound, affect, memory: re-listening to the past.”</a></p>
+    	
+    	<p><b>Keynote lecture at the event “Balkan music and culture: sounds of past and present,” University of Pittsburgh, Department of Music in Carnegie Mellon University School of Music, Pittsburgh, 2018.</b><br><a href="https://nextpittsburgh.com/events/symposium-dance-party-will-explore-balkan-music-culture/" target="_blank"> Title: “Kafana musicians: music labour in Southeastern Europe between stigmatization and glorification” </a></p>
+    	
+    	<p><b>Keynote lecture at the Center for World Music (CWM) at the Ninth International Doctoral Workshop in Ethnomusicology,  University of Hildesheim & Hanover University of Music, Drama and Media, 2017.</b><br><a href="https://www.uni-hildesheim.de/media/presse/2017_Doctoral_Workshop_Ethnomusicology_Center_for_World_Music_CWM_Uni_Hildesheim_program_and_abstracts.pdf" target="_blank"> Title:  “Sonic regimes of uncertainty : toward affective politics of (self)emancipatory musical alliances” </a></p>
+    	
+    	<p><b>Lecture at the Music Department, the Federal University of Rio de Janeiro, 2016.</b><br>Title: “Música nos Bálcãs : o branding e suas implicações políticas (Balkan music : problematizing politics of branding”</p>
+    
+    	</div>
+    	</div>
     
     </div>
     
@@ -607,11 +771,156 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     	
     	<div class="row">
     	
-    	 	<div class="column" style="font-size:120%">
+    	
+    	<div class="columnPublic" style="font-size:120%">
+    		<h2>Videos</h2>
+    	
+    	
+    		<p><b>Interview by Saša Vesić “Moj Niš”.</b> TV Belle Amie,  2025. </p>
+    	    	
+    	
+    		<iframe 
+  			width="400" 
+  			height="315" 
+  			src="https://www.youtube.com/embed/kjD5O20_T4k" 
+  			title="YouTube video player" 
+  			frameborder="0" 
+  			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  			referrerpolicy="strict-origin-when-cross-origin" 
+  			allowfullscreen>
+			</iframe>
+  		
+    	
+    		<p><b>Participation in the documentary film War and Song (Rat i pesma).</b> Radio Television of Serbia (RTS), Official Channel, 2025.</p>
+    	
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/g57hTlHX6Ak?si=gjaQUcQy6CjpkfFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    	
+    		<p><b>Interview for the television programme Tednik (TV Slovenia), titled “Long Live the Partisan Song!</b>,” 2024.</p>    	
+    	
+    		<video width="400" height="315" controls>
+			  <source src="https://vodstr.rtvslo.si/dekohack_archive11/_definst_/2024/11/04/175084155.smil/chunklist_w1540451439_b4096000_tkd293emF0b2tlbmVuZHRpbWU9MTc3MTg4MzM4NyZ3b3d6YXRva2VuaGFzaD1VNjc1dzdEXy10Y1lrZExGd0FzYUhVUlcxY3ZLUWpmMlMtbTFZUEpxRW13PQ==.m3u8" type="video/mp4">
+			</video>
+
+    		
+    		
+    		<p><b>Interview on Radiotelevision of Slovenia (RTV Slovenia), programme Na glas, hosted by Saša Banjanac-Ljubej</b>, 2024.</p>
+
+    		
+    		<video width="400" height="315" controls>
+			  <source src="https://vodstr.rtvslo.si/dekohack_archive11/_definst_/2024/01/05/175013521.smil/chunklist_w382113487_b3640000_tkd293emF0b2tlbmVuZHRpbWU9MTc3MTg4NDQyOCZ3b3d6YXRva2VuaGFzaD1nUThlRXpMbmpQWkFySW1Kb0ZRZElRckxpNlNlWGtMcXVDcHlPelo0U2drPQ==.m3u8" type="video/mp4">
+			</video>
+    	
+    		<p><b>Participation in a roundtable discussion at the exhibition opening and comic book launch of the second volume of The Cry of the People (Jacques Tardi), addressing representations of revolt in comics, music, and film,</b> 2022. </p>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/cnSDNZn1PEI?si=glnpaxAjrfhMFGOf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+    		<p><b>Interview at the Podgorica Book Fair (Montenegro), discussing music, politics, and contemporary activism,</b> 2022.</p>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/PB8TwQCb310?si=CEwNI-3LGLMSxU1H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/2Wia-ktvdN8?si=gXYZxVW7ZnyD5vVy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/IJu6hoBj-cA?si=SUO97ErmlMZIIE2H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    		
+    		<p><b>Trailer of the documentary film “Solčence zahaja,”</b> 2020.</p>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/7tGVGAhLG-c?si=7SpQoy5qZP-eBclO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+			<p><b>Appearance in the talk show about the documentary movie “Solčence zahaja”,</b> Tv Prva, 2019.</p>
+			
+			<iframe width="400" height="315" src="https://www.youtube.com/embed/XL9v3CW7mCs?si=qAYasV3twSImtgvu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+			
+			<p><b>Appearance at the show “15 minutes,”</b> Južne vesti TV, 2019.</p>
+			
+			<iframe width="400" height="315" src="https://www.youtube.com/embed/_UhiHHV-jNU?si=qEd3B15Th758FmJ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    	
+    		<p>About documentary "Solčence zahaja":</p>
+    	
+    		<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063676383101%2Fvideos%2F336013642569580%2F&show_text=true&width=560&t=0" width="400" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+    		
+    		<p><b>Promotion of the book “Science with(out) Youth,”</b>  2017.</p>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/4CmYShRrzpg?si=joWD3s9kP4J2AxUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    		
+    		<p><b>Participation in the thematic event “Gender Equality in Science? Early-Career Women Researchers” the GARCIA project,</b> promotion of the book, 2017.</p>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/rjVQrZ2zkyc?si=eZbb3ChyR2Epe_25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    		
+    		<p><b>Presentation at the international conference Nostalgia on the Move, with the talk “Politics of Sentimentality: Towards an Affectivity of Post-Socialism,” in a panel on nostalgia and articulated resistance,</b> 2017.</p>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/8TvjXAHBERE?si=49me6riPKUSBqWYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    		
+    		<p><b>Promotion of the book “New lives of partisan songs”/ Novi život partizanskih pesama (in Serbocroatian),</b> Centre for Cultural Decontamination, Belgrade, 2016.</p>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/NvH3KX4P4y0?si=R7pfZ7n-mYNYRsFC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    
+    	</div>
+    	
+    	<div class="columnPublic" style="font-size:120%">
+    		<h2>Podcasts and audio</h2>
+    		
+    		<p><b>“Toby Miller Podcasts”: A conversation about  Serbian protests, socialism, cultural politics, affect, ethnomusicology, Yugoslavia, and leisure/amateurism,</b> 2025.</p>
+    		
+    		<iframe width="400" height="315" src="https://www.youtube.com/embed/QU1rTnoaqV0?si=cYvUfr1c9FhFfSGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    		<p><b>Interview about the phenomenon of Bella ciao. Radio Rojc, Pula,</b> 2021.</p>
+    		
+    		<iframe width="100%" height="120" src="https://player-widget.mixcloud.com/?light=1&feed=%2FRadio_Rojc%2Faudio-dokument-fenomen-o-bella-ciao%2F" allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;" frameborder="0"></iframe>
+    		
+    		<p><b>Guest on Glasovi svetov (Radio Slovenia, ARS), in conversation with Martina Tita Mayer, discussing gender inequality in academia and structural barriers facing women researchers.”The Position of Women in Science” (Položaj žensk v znanosti),</b> 2021.</p>
+    		
+    		 <video width="400" height="100" controls>
+			  <source src="https://progressive.rtvslo.si/ava_archive11/2021/03/16/Polozaj5134473.mp3?keylockhash=sL8Y4MFSrYpmw4kTpT8PdnrvfdPuIdhA2Sk1IKMLGvA" type="audio/mp3">
+			</video>
+    		
+    		
+    		<p><b>Interview on Radio Akustika Niš by Nataša Tasić, exploring activist choirs and the political potential of radical amateurism in contemporary musical practice. “Choirs and Radical Amateurism,”</b> 2020.</p>
+    		
+    		<video width="400" height="100" controls>
+			  <source src="https://play.sounder.fm/proxy/9460fc74635747b9885aae9409ffcdb7/WzPXz/dz0ND/cdn.sounder.fm/9460fc74635747b9885aae9409ffcdb7/audio/WzPXz-dz0ND.m4a" type="audio/mp3">
+			</video>
+			
+			<p><b>Guest on the programme Frekvenca X (Val 202, RTV Slovenia), discussing urban soundscapes and the social meanings of city sounds. “All the Sounds of Our City” (Vsi zvoki našega mesta),</b> 2017.</p>
+			
+			 <video width="400" height="100" controls>
+			  <source src="https://progressive.rtvslo.si/ava_archive04/2017/11/02/Vsizvokinaegamesta3625668.mp3?keylockhash=l_d1C6RjEFyNC6SHj2AN-ZC0VQnLwCzuzjMnlHwoa-Q" type="audio/mp3">
+			</video>
+			
+			<p><b>Interview on Radio Študent (Kontrola leta), reflecting on partisan songs and their contemporary political and cultural resonances.“Ay, Carmela,”</b> 2016.</p>
+			
+			 <video width="400" height="100" controls>
+			  <source src="https://shramba.radiostudent.si/sites/default/files/posnetki/Kontrola%20leta/2016-06-11-kontrola-leta-aj-karmela.mp3" type="audio/mp3">
+			</video>
+
+			<p><b>Commentator on Slovenska zemlja v pesmi in besedi (Radio Slovenia), addressing Slovenian musical heritage and collective memory. RTV Slovenija,</b> 2016.</p>
+			
+			<p><b>Guest at Stepenik (Radio Belgrade 2, Radio Television of Serbia), examining political culture and its sonic and cultural dimensions.“On the Phenomena of Political Culture” (O fenomenima političke kulture),</b> 2016.</p>
+			
+			<p><b>Appearance on the programme Frekvenca X (Val 202, Radio Slovenia), in conversation with Saša Vipotnik and Adriana Barton, discussing the cultural and social implications of “switching off” in contemporary life,</b> 2023.</p>
+			
+			<video width="400" height="100" controls>
+			  <source src="https://progressive.rtvslo.si/ava_archive11/2023/06/08/KoseizRA_SLO_LJT_1192429_10438878.mp3?keylockhash=muW0ZjEyBJItacgyyrMR11etVR1bBXvO0Lc3kzgpsuw" type="audio/mp3">
+			</video>
+			
+			<p><b>Podcast ARS, Radio Slovenia discussing the book “Music, Politics, Affect: The New Life of Partisan Songs in Slovenia,”</b> 2015.</p>
+			
+			<video width="400" height="100" controls>
+			  <source src="https://progressive.rtvslo.si/ava_archive02/2015/07/23/IzslojeMMC.PR3.20150723.4.1700.mp3?keylockhash=522-yCtsiti6ZpfWRmr6CDA4s5itFYF1_g6wSn-n1Wo" type="audio/mp3">
+			</video> 
+			
+			<p><b>Audio interview about the book “Music, Affect, Politics” (Telstar / Radio Slovenia), featuring collective and community music practice and discussion, interview by Jure Longyka,</b> 2015.</p>    		
+    		
+    		
+    	</div>
+    	
+    	
+    	
+    	 	<div class="columnPublic" style="font-size:120%">
    		
    		 		<h2>Printed media</h2>
     	
-    			<p><a href="https://classicallradio.com/articles/sr_RS/2025/03/19/etnomuzikoloskinja-ana-hofman-kolektivno-dizanje-glasa-je-jedan-od-sinonima-za-protest/" target="_blank"> Etnomuzikološkinja Ana Hofman : kolektivno dizanje glasa je jedan od sinonima za protest. ClassicAllradio.com</a></p>    	
+    			<p><b>Ethnomusicologist Ana Hofman: “Collective raising of voices is one of the synonyms for protest.”</b> Interview by Ivana Ljubinković, Portal ClassicAll, 2025.</p>    	
     	
     			<a href="https://classicallradio.com/articles/sr_RS/2025/03/19/etnomuzikoloskinja-ana-hofman-kolektivno-dizanje-glasa-je-jedan-od-sinonima-za-protest/" class="preview-card" target="_blank">
   				<div class="card-image" style="">
@@ -627,7 +936,7 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     	
     	
     	
-    			<p><a href="https://www.jutarnji.hr/kultura/glazba/antropologinja-za-jutarnji-mladi-jasno-osjecaju-razorne-posljedice-globalnog-neoliberalnog-kapitalizma-on-nije-15590721" target="_blank"> Ana Hofman : razgovor s etnomuzikologinjom i antropologinjom. Jutarnji list. [Spletna izd.]. 31. maj 2025, br. 9622, str. 50-51,</a></p>    	
+    			<p><b>Ana Hofman: A conversation with the ethnomusicologist and anthropologist.</b> Nenad Rizvanović, Jutarnji list, 31 May 2025.</p>    	
     	
     			<a href="https://www.jutarnji.hr/kultura/glazba/antropologinja-za-jutarnji-mladi-jasno-osjecaju-razorne-posljedice-globalnog-neoliberalnog-kapitalizma-on-nije-15590721" class="preview-card" target="_blank">
   				<div class="card-image">
@@ -639,40 +948,226 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     				<p class="card-description">Ana Hofman : razgovor s etnomuzikologinjom i antropologinjom.</p>
   				</div>
 				</a>
+				
+				
+				
+				<p><b>Interview in magazine Vreme by Sonja Ćirić, “Padaj silo i nepravdo” is a Hit Again.</b> 2024.</p>    	
     	
+    			<a href="https://vreme.com/mozaik/padaj-silo-i-nepravdo-je-opet-hit/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://vreme.com/wp-content/themes/cubestheme/frontend/img/logo.png" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://vreme.com/</span>
+    				<h3 class="card-title">Vreme</h3>
+    				<p class="card-description">Intervju: Ana Hofman, Padaj silo i nepravdo je opet hit</p>
+  				</div>
+				</a>
+				
+				
+				<p><b>Interview on P-portal “Activist Choirs Have Breathed New Life into Partisan Songs” (Aktivistički horovi su partizanskim pesmama udahnuli novi život),</b> 2023.</p>    	
     	
+    			<a href="https://p-portal.net/ana-hofman-aktivisticki-horovi-su-partizanskim-pesmama-udahnuli-novi-zivot" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://p-portal.net/wp-content/uploads/2021/07/privrednik-logo-h-1.png" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://p-portal.net/</span>
+    				<h3 class="card-title">P-portal</h3>
+    				<p class="card-description">Ana Hofman: Aktivistički horovi su partizanskim pesmama udahnuli novi život</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview in Dnevnik Online “On a Slovenian Folk Song That Slovenians Do Not Know” (O slovenski ljudski, ki je Slovenci ne poznamo) </b>– discussing overlooked song traditions and the transnational circulation of so-called “Slovenian” folk music, 2023.</p>    	
+    	
+    			<a href="https://www.dnevnik.si/kultura/film/intervju-ana-hofman-etnomuzikologinja-in-antropologinja-o-slovenski-ljudski-ki-je-slovenci-ne-poznamo-2074785/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://www.dnevnik.si/themes/dnevnik/graphics/dnevnik.svg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://www.dnevnik.si/</span>
+    				<h3 class="card-title">Dnevnik</h3>
+    				<p class="card-description">Intervju Ana Hofman, etnomuzikologinja in antropologinja: O slovenski ljudski, ki je Slovenci ne poznamo</p>
+  				</div>
+				</a>
+				
+				<p><b>An Interview by Antonio Pita for El Pais digital: “l rock casi salva a Yugoslavia,” </b>2021.</p>    	
+    	
+    			<a href="https://elpais.com/cultura/2021-03-22/el-rock-casi-salva-a-yugoslavia.html" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://static.elpais.com/dist/resources/images/logos/primary/el-pais-50.svg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://elpais.com/</span>
+    				<h3 class="card-title">El Pais</h3>
+    				<p class="card-description">El rock casi salva a Yugoslavia</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview in Slovenske novice “Partisan Song on the UNESCO List?” (Partizanska pesem na Unescovem seznamu?)</b> – examining debates on cultural heritage recognition and the contemporary status of Partisan song traditions, 2018.”</p>    	
+    	
+    			<a href="https://slovenskenovice.delo.si/novice/slovenija/partizanska-pesem-na-unescovem-seznamu" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://slovenskenovice.delo.si/logos/sn_logo_white.svg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://slovenskenovice.delo.si/</span>
+    				<h3 class="card-title">Slovenske novice</h3>
+    				<p class="card-description">Partizanska pesem na Unescovem seznamu?</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview in MMC RTV SLO “Gender Equality: Professors Choose Women Assistants and Male Successors” (Enakost med spoloma: profesorji izbirajo ženske asistentke in moške naslednike)</b> – addressing structural gender inequalities in academia and research institutions, 2017.</p>    	
+    	
+    			<a href="https://www.rtvslo.si/slovenija/enakost-med-spoloma-profesorji-izbirajo-zenske-asistentke-in-moske-naslednike/412764" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://upload.wikimedia.org/wikipedia/sl/0/0b/Rtv_slo.png" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://www.rtvslo.si/</span>
+    				<h3 class="card-title">RTV Slovenija</h3>
+    				<p class="card-description">Enakost med spoloma: "Profesorji izbirajo ženske asistentke in moške naslednike"</p>
+  				</div>
+				</a>
+				
+				
+				<p><b>Interview with Ana Hofman for the Remembering Yugoslavia podcast, exploring her research on the revival, meaning, and political resonance of partisan songs in the contemporary Balkans,</b> 2016.</p>    	
+    	
+    			<a href="https://rememberingyugoslavia.com/novi-zivot-partizanskih-pesama/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://yugoblok.com/wp-content/uploads/2024/11/RY-Square.jpg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://rememberingyugoslavia.com/</span>
+    				<h3 class="card-title">Remembering Yugoslavia</h3>
+    				<p class="card-description">"Novi život partizanskih pesama"</p>
+  				</div>
+				</a>
+				
+				<p><b>About the book “New Lives of Partisan Songs,” Peščanik,</b> 2016.</p>    	
+    	
+    			<a href="https://pescanik.net/novi-zivot-partizanskih-pesama/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://pescanik.net/wp-content/uploads/2014/01/logo1.png" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://pescanik.net/</span>
+    				<h3 class="card-title">Peščanik</h3>
+    				<p class="card-description">"Novi život partizanskih pesama"</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview for Balkan insight “Old Partisan Songs Have ‘New Revolutionary Potential’,”</b> 2016.</p>    	
+    	
+    			<a href="https://balkaninsight.com/2016/05/27/old-partisan-songs-have-new-revolutionary-potential-05-26-2016/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://balkaninsight.com/wp-content/uploads/2018/10/Balkan-Transitional-Justice-logo.png" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://balkaninsight.com/balkan-transitional-justice-home/</span>
+    				<h3 class="card-title">Balkan Transitional Justice</h3>
+    				<p class="card-description">Old Partisan Songs Have ‘New Revolutionary Potential’</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview for magazine  Politika “Ponovo pevamo partizanske pesme”  (We sing again partisan songs), </b> 2016.</p>    	
+    	
+    			<a href="https://www.politika.rs/sr/clanak/370853/Ponovo-pevamo-partizanske-pesme" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://www.politika.rs/themed/politika/img/branding/politika-logo-nopadding.svg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://www.politika.rs/</span>
+    				<h3 class="card-title">Politika</h3>
+    				<p class="card-description">Ponovo pevamo partizanske pesme</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview  for portal Mašina “Horsko pevanje je važan način kolektivne mobilizacije” (Collective singing is an importnat way of collective mobilization)”</b> 2016.</p>    	
+    	
+    			<a href="https://www.masina.rs/horsko-pevanje-je-vazan-nacin-kolektivne-mobilizacije/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://www.masina.rs/wp-content/uploads/2025/12/Masina-Logo-Colors-FULL.svg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://www.masina.rs/</span>
+    				<h3 class="card-title">Mašina</h3>
+    				<p class="card-description">Horsko pevanje je važan način kolektivne mobilizacije</p>
+  				</div>
+				</a>
+				
+				<p><b>Profile and interview on Eurozine, in which Ana Hofman discusses the intersections of music, politics, and academic life, reflecting on neoliberal pressures in the academy and the cultural politics of sound and collective practice,</b> 2016.</p>    	
+    	
+    			<a href="https://www.eurozine.com/authors/hofman-ana/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Eurozine-logo.jpg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://www.eurozine.com/</span>
+    				<h3 class="card-title">Eurozine</h3>
+    				<p class="card-description">Neoliberalism and higher education in Central Europe</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview in Oštra Nula “The New Life of Partisan Songs” (Novo življenje partizanskih pjesama)</b> – on activist choirs and the afterlives of socialist musical repertoires, 2015.</p>    	
+    	
+    			<a href="https://ostranula.org/novo-zivljenje-partizanskih-pjesama/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://ostranula.org/wp-content/uploads/2018/08/logo-ON.png" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://ostranula.org/</span>
+    				<h3 class="card-title">Oštra Nula</h3>
+    				<p class="card-description">Multimedijalno predavanje “Novo življenje partizanskih pjesama”</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview with  Saša Banjanac Ljubej, Radio-television of Slovenia, </b> 2015.</p>    	
+    	
+    			<a href="https://www.rtvslo.si/zabava-in-slog/glasba/lepa-brena-od-kafanske-pevke-do-oblikovalke-glasbenih-trendov-na-balkanu/367390" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://upload.wikimedia.org/wikipedia/sl/0/0b/Rtv_slo.png" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://www.rtvslo.si/</span>
+    				<h3 class="card-title">RTV Slovenija</h3>
+    				<p class="card-description">Lepa Brena: Od "kafanske" pevke do oblikovalke glasbenih trendov na Balkanu”</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview in Kulturistra “Ana Hofman – The New Life of Partisan Songs in Slovenia” (Ana Hofman – novi život partizanskih pjesama u Sloveniji) </b>– addressing the revival and political meanings of Partisan songs in Slovenia, 2015.</p>    	
+    	
+    			<a href="https://kulturistra.hr/2015/05/razgovor-ana-hofman-novi-zivot-partizanskih-pjesama-u-sloveniji/" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://scontent.flju2-4.fna.fbcdn.net/v/t39.30808-6/401029814_725198242966493_3502858605664410172_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=kMGmreM9IRQQ7kNvwEARQ_F&_nc_oc=Adl4VsQsZM2i0OQowMcUFiOC4ji4TWNyLCrhZaVHs2kpbuuNB2X9fVUPV1UEMRxxRvM&_nc_zt=23&_nc_ht=scontent.flju2-4.fna&_nc_gid=N76nWRjrIJ3w9C1XPHwLeg&oh=00_AfstCFxuU9pltZMhy_e2B5BD9Zhkl3kNYtbkPvf_nOK5YA&oe=69A386DF" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://kulturistra.hr/</span>
+    				<h3 class="card-title">Kulturistra</h3>
+    				<p class="card-description">Razgovor: Ana Hofman – Novi život partizanskih pjesama u Sloveniji</p>
+  				</div>
+				</a>
+				
+				<p><b>Interview in Nova muska “5ka – Thinking Music (with Ana Hofman)” (5ka – Misliti musko)</b> – discussing critical approaches to music, politics, and sound, 2013.</p>    	
+    	
+    			<a href="https://novamuska.org/?p=7890" class="preview-card" target="_blank">
+  				<div class="card-image">
+    				<img src="https://www.sigic.si/upload/articles/big/7096.jpg" alt="Site Preview">
+  				</div>
+  				<div class="card-content">
+    				<span class="card-domain">https://novamuska.org/</span>
+    				<h3 class="card-title">Nova muska</h3>
+    				<p class="card-description">5ka – MISLITI MUSKO (XXX)</p>
+  				</div>
+				</a>
+				
+    	
+    			
     	
     	
     	</div>
     	
-    	<div class="column" style="font-size:120%">
-    		<h2>Videos</h2>
     	
-    	
-    		<p>Moj Niš : autor Saša Vesić. Niš: Moj Niš, 2025. 1 spletni vir (1 videodatoteka (52 min, 22 sek)). </p>
-    	    	
-    	
-    		<iframe 
-  			width="560" 
-  			height="315" 
-  			src="https://www.youtube.com/embed/kjD5O20_T4k" 
-  			title="YouTube video player" 
-  			frameborder="0" 
-  			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  			referrerpolicy="strict-origin-when-cross-origin" 
-  			allowfullscreen>
-			</iframe>
-  		
-    	
-    		<p>Učestvovanje v dokumentarnem filmu Rat i Pesma, Radio-televizija Srbije, RTS Sajt - Zvanični kanal, 2025.</p>
-    	
-    		<iframe width="560" height="315" src="https://www.youtube.com/embed/g57hTlHX6Ak?si=gjaQUcQy6CjpkfFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    	
-    		<p>About documentary "Solčence zahaja":</p>
-    	
-    		<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063676383101%2Fvideos%2F336013642569580%2F&show_text=true&width=560&t=0" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-    
-    	</div>
     
     </div> 
     
@@ -684,6 +1179,15 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     <div id="contact" class="tab-content"><h2>Contact</h2>
     	<p> <i class="fa fa-phone" style="font-size:20px"></i>  +386 1 47 06 528 </p>
     	<p> <i class="fa fa-envelope" style="font-size:20px"></i>  ana.hofman@zrc-sazu.si </p>
+    	<p> Institutional website: <br></p>
+    	<p><a href="https://ikss.zrc-sazu.si/en/sodelavci/ana-hofman-en" target="_blank"> https://ikss.zrc-sazu.si/en/sodelavci/ana-hofman-en </a><br></p>
+    	<p> Academia.edu profile: <br></p>
+    	<p><a href="https://zrc-sazu.academia.edu/AnaHofman" target="_blank"> https://zrc-sazu.academia.edu/AnaHofman </a><br></p>
+    	<p> Google Scholar profile: <br></p>
+    	<p><a href="https://scholar.google.com/citations?hl=sl&user=8Hw7lCcAAAAJ" target="_blank"> https://scholar.google.com/citations?hl=sl&user=8Hw7lCcAAAAJ </a><br></p>
+    	<p> Research Gate profile: <br></p>
+    	<p><a href="https://www.researchgate.net/settings/account" target="_blank"> https://www.researchgate.net/settings/account </a><br></p>
+    	
     	
     	</div>
 
@@ -712,6 +1216,71 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
   		var dots = document.getElementById("dots");
   		var moreText = document.getElementById("more");
   		var btnText = document.getElementById("myBtn");
+		
+  		if (dots.style.display === "none") {
+    		dots.style.display = "inline";
+    		btnText.innerHTML = "Read more"; 
+    		moreText.style.display = "none";
+  		} else {
+    		dots.style.display = "none";
+    		btnText.innerHTML = "Read less"; 
+    		moreText.style.display = "inline";
+  		}
+		}
+		
+		
+		function booksButton() {
+  		var dots = document.getElementById("dotsBook");
+  		var moreText = document.getElementById("moreBook");
+  		var btnText = document.getElementById("bookBtn");
+		
+  		if (dots.style.display === "none") {
+    		dots.style.display = "inline";
+    		btnText.innerHTML = "Read more"; 
+    		moreText.style.display = "none";
+  		} else {
+    		dots.style.display = "none";
+    		btnText.innerHTML = "Read less"; 
+    		moreText.style.display = "inline";
+  		}
+		}
+		
+		function specButton() {
+  		var dots = document.getElementById("dotsSpec");
+  		var moreText = document.getElementById("moreSpec");
+  		var btnText = document.getElementById("specBtn");
+		
+  		if (dots.style.display === "none") {
+    		dots.style.display = "inline";
+    		btnText.innerHTML = "Read more"; 
+    		moreText.style.display = "none";
+  		} else {
+    		dots.style.display = "none";
+    		btnText.innerHTML = "Read less"; 
+    		moreText.style.display = "inline";
+  		}
+		}
+		
+		function artButton() {
+  		var dots = document.getElementById("dotsArt");
+  		var moreText = document.getElementById("moreArt");
+  		var btnText = document.getElementById("artBtn");
+		
+  		if (dots.style.display === "none") {
+    		dots.style.display = "inline";
+    		btnText.innerHTML = "Read more"; 
+    		moreText.style.display = "none";
+  		} else {
+    		dots.style.display = "none";
+    		btnText.innerHTML = "Read less"; 
+    		moreText.style.display = "inline";
+  		}
+		}
+		
+		function chapButton() {
+  		var dots = document.getElementById("dotsChap");
+  		var moreText = document.getElementById("moreChap");
+  		var btnText = document.getElementById("chapBtn");
 		
   		if (dots.style.display === "none") {
     		dots.style.display = "inline";
