@@ -7,17 +7,21 @@
     <title>Ana Hofman</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=BIZ UDPMincho:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
         body { 
-            font-family: 'Libre Baskerville', serif; 
-            line-height: 1.8; 
+            font-family: 'BIZ UDPMincho', serif; font-size: 22px;
+            
+            line-height: 1.4; 
             margin: 0; 
             padding: 40px; 
             color: #1a1a1a;
-            background-color:#efccff;
+            background-color:#ff3333
+           /* background-color:#efccff;*/
             /*background-color: #e0e0e0; */
             
         }
@@ -30,18 +34,28 @@
         .tab-container { 
             display: flex; 
             justify-content: flex-end; 
-            margin-bottom: 60px;
+            margin-bottom: 6px;
             align-items: center;
             flex-wrap: wrap;
         }
+        
+        .tab-menu { 
+            display: flex; 
+            justify-content: center; 
+            margin-bottom: 6px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
 		/*meni slova */
         .tab-button { 
-            font-family: 'Libre Baskerville', serif;
+            font-family: 'BIZ UDPMincho', serif;
             padding: 10px 15px; 
             cursor: pointer; 
             border: none; 
             background: none;
-            font-size: 20px; 
+            font-size: 24px; 
+            font-weight: 500;
             transition: 0.2s; 
             color: #262626;
             border-bottom: 2px solid transparent;
@@ -78,18 +92,17 @@
         /* SHOW TABS */
         .tab-content.active { display: block; }
         
-        #public.tab-content.active {
-    		
-            max-width: 2000px; 
-            
-		}	
+       
 
+		.public-text {
+			
+    		text-align: left;
+    		line-height: 1.4;
+    		padding-left: 30px;
+    		text-align: justify; 
+    		text-justify: inter-word;
+		}
 
-		#lectures.tab-content.active {
-    				
-            		max-width: 2000px; 
-            		
-				}	
 
 
        /* This rule ONLY applies to the About section */
@@ -105,13 +118,13 @@
     		margin: 0 !important; 
 		}	
 
-        .about-text { text-align: left; font-size: 16px; line-height: 1.6 !important; padding-left: 30px; text-align: justify; text-justify: inter-word;}
+        .about-text { text-align: left; line-height: 1.4 !important; padding-left: 30px; text-align: justify; text-justify: inter-word;}
         .about-image { width: 100%; max-width: 600px; height: auto; justify-self: end; padding-right: 200px;}
 
-        .home-image { position: absolute;  left: 270px; width: 70%; height: 80%; margin-left: 0 ; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .home-image { position: absolute;  left: 370px; width: auto; height: auto; margin-left: 0 ; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         
         h1 { position: absolute; left: 140px; font-size: 24px; font-weight: 600; margin-top: 0; margin-bottom: 20px; }
-        h2 { font-weight: 700; margin-top: 0; margin-bottom: 20px; }
+        h2 { font-size: 23px; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
         
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
@@ -131,6 +144,7 @@
 		
 		.cv-line {
 			border-bottom: 1px solid #ccc;
+			margin-bottom: 10px;
 		}
 		
 		details summary {
@@ -162,7 +176,7 @@
 		
 		.cv-content {
     		padding: 15px 0;
-    		line-height: 1.6;
+    		line-height: 1.4;
 		}
 		
 		/* Specifically target the CV section to align it left */
@@ -194,10 +208,37 @@
     		
 		}
 		
+		
+		/* Research Section Grid */
+		#lectures.tab-content.active {
+    		display: grid !important;
+    		grid-template-columns: 1fr 900px; /* Text takes available space, Menu takes 400px */
+    		gap: 60px;
+    		align-items: start;
+    		max-width: 100% !important;
+    		width: 100% !important;
+    		margin: 0 !important;
+    		
+    		
+		}
+		
+		#public.tab-content.active {
+    		display: grid !important;
+    		grid-template-columns: 1fr 900px; /* Text takes available space, Menu takes 400px */
+    		gap: 60px;
+    		align-items: start;
+    		max-width: 100% !important;
+    		width: 100% !important;
+    		margin: 0 !important;
+    		
+    		
+		}
+		
+		
 		/* Ensure the text stays left-aligned */
 		.research-text {
     		text-align: left;
-    		line-height: 1.6;
+    		line-height: 1.4;
     		padding-left: 30px;
     		text-align: justify; 
     		text-justify: inter-word;
@@ -333,17 +374,26 @@
 
     <nav class="tab-container">
         <button class="tab-button name-brand active" onclick="openTab(event, 'home')">Ana Hofman</button>
+         <button class="tab-button" onclick="openTab(event, 'contact')">Contact</button>
+    </nav>    
+        
+     <nav class="tab-menu">   
         <button class="tab-button" onclick="openTab(event, 'about')">About</button>
         <button class="tab-button" onclick="openTab(event, 'cv')">CV</button>
         <button class="tab-button" onclick="openTab(event, 'research')">Research</button>
         <button class="tab-button" onclick="openTab(event, 'lectures')">Lectures</button>
         <button class="tab-button" onclick="openTab(event, 'public')">Public Engagement</button>
-        <button class="tab-button" onclick="openTab(event, 'contact')">Contact</button>
+       
     </nav>
 
     <div id="home" class="tab-content active">
-        <img src="Za sajt_01.jpg" alt="Ana Hofman" class="home-image">
+        <img src="Za sajt_01.png" alt="Ana Hofman" class="home-image">
     </div>
+    
+    
+    
+    
+    
 
     <div id="about" class="tab-content">
         <div class="about-text">
@@ -406,6 +456,7 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
 	BA, 1999, Faculty of Music, University of Arts, Belgrade, Serbia<br><br>
 	
 	<a href="https://bib.cobiss.net/biblioweb/biblio/si/slv/cris/29339" target="_blank">SICRIS</a>
+	<br>
 	</p>
 		
 		<div class="cv-line">
@@ -705,14 +756,25 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     
     
     <div id="lectures" class="tab-content">
-    
-    	<h1>Keynote addresses given (selection)</h1>
+        	    	
     	
-    	<div class="row">
+    	<div class="research-text">
     	
-    	 	<div class="column" style="font-size:120%">
+    	<p> Ana Hofman has delivered numerous invited lectures and keynote addresses at universities, research centres, and major scholarly gatherings across Europe, North America, and Latin America. Her talks have been featured at institutions such as Unversity of Chicago, King’s College London, SOAS University of London, the University of Music and Performing Arts Vienna, McGill University, the University of Pittsburgh, the Federal University of Rio de Janeiro, and the University of Hildesheim, among others. She has been a keynote speaker at international conferences and national symposia, addressing themes at the intersection of music, sound, political struggle and affective politics in socialist and postsocialist societies. Her lectures engage questions of musical labor, activism and memory, antifascism, commodification, and the political life of sound, positioning ethnomusicology as a field attentive to both historical remembrance and future-oriented forms of collective imagination.</p>
+    	</div>
+    	
+    	
+    	<div class="research-menu-container">
+    	
+    	<div class="cv-section">
+            		<details>
+                		<summary>Videos</summary>
+                		<div class="cv-content">
+    	
+    	
     	 	
-    	 <p><a href="https://www.youtube.com/live/dHWMgTQeLa4" target="_blank"> Predavanje v ciklu »Glasbeni svetovi socialistične Jugoslavije«, ki ga organizira Slovensko muzikološko društvo v sodelovanju z Glasbenonarodopisnim inštitutom ZRC SAZU.</a><br> Title: “Med »šihti«: glasbeno življenje v Jugoslaviji med delom in prostim časom”</p>
+    	 	
+    	 <p><a href="https://www.youtube.com/live/dHWMgTQeLa4" target="_blank"> Lecture in the series “Musical Worlds of Socialist Yugoslavia” (in Slovenian), organized by the Slovenian Musicological Society in collaboration with the Institute of Ethnomusicology ZRC SAZU.</a><br> Title: “Between ‘Shifts’: Musical Life in Yugoslavia between Work and Leisure” (in Slovenian)</p>
     	 
     	 
     	 <iframe width="560" height="315" src="https://www.youtube.com/embed/dHWMgTQeLa4?si=Qa0huqVk2D1dayCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -746,9 +808,18 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     	
     	<p><a href="https://www.youtube.com/watch?v=OKr0saA09Jk" target="_blank"> "Participation at the online discussion “Série Música em Debate,”Laboratório de Etnomusicologia, Federal University of Rio de Janeiro UFRJ. 2020."</a></p>
     	
+    	
+    	</div>
+           </details>
+        		</div>
     	    	
-    	    	</div>
-    	    	<div class="column" style="font-size:120%">
+    	    	
+    	    	
+    	    	<div class="cv-section">
+            		<details>
+                		<summary>Lectures</summary>
+                		<div class="cv-content">
+    	    	
     	
     	<p><b>Lecture at Music Department, King’s College London, 2025.</b><br><a href="https://www.kcl.ac.uk/events/strategic-amateurism-self-organized-choirs-and-the-legacies-of-socialist-cultural-commons" target="_blank"> Title: “Strategic Amateurism: Self-Organized Choirs and the Legacies of Socialist Cultural Commons"</a></p>
     	
@@ -767,19 +838,25 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     	<p><b>Lecture at the Music Department, the Federal University of Rio de Janeiro, 2016.</b><br>Title: “Música nos Bálcãs : o branding e suas implicações políticas (Balkan music : problematizing politics of branding”</p>
     
     	</div>
-    	</div>
+            </details>
+        		</div>
     
-    </div>
+  		</div>
+	</div>
     
     
     
     <div id="public" class="tab-content">
+    <div class="public-text">
+    
+    
+    <p>Ana Hofman regularly contributes to public debates through interviews, podcasts, television appearances, and print media across the post-Yugoslav region and beyond. Her work has been featured in major newspapers and cultural magazines such as El País, Jutarnji list, Vreme, Politika, Dnevnik, and Slovenske novice, as well as on platforms including Eurozine, Balkan Insight, Peščanik, Mašina, and P-portal, where she addresses questions of music, memory, nationalism, antifascism, gender, and political mobilization. She has appeared on national television and radio (RTV Slovenia, RTS) and in international podcasts such as Remembering Yugoslavia, bringing scholarly perspectives on partisan song, activist choirs, and cultural politics into broader public circulation. Her media presence reflects a sustained engagement with contemporary debates on music, sound and politics, value, and collective identity in times of political polarization. In addition to interviews and commentary, she is also active in documentary filmmaking and is the author of the documentary film Solčence zahaja, further extending her research into visual and public formats.</p>
+    	</div>
     	
     	
-    	<div class="row">
     	
     	
-    	<div class="columnPublic" style="font-size:120%">
+    	<div class="research-menu-container">
     		
     	
     	
@@ -869,9 +946,9 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     	</div>
     
     
-    	</div>
     	
-    	<div class="columnPublic" style="font-size:120%">
+    	
+    	
     		
     		
     		
@@ -938,11 +1015,11 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     	</div>
     		
     		
-    	</div>
     	
     	
     	
-    	 	<div class="columnPublic" style="font-size:120%">
+    	
+    	 
    		
    		 	
    		 		
@@ -1200,7 +1277,7 @@ She has received the Danubius Mid-Career Award by the Austrian Ministry of Educa
     	</div>
     	
     	
-    	</div>
+    	
     	
     	
     
