@@ -15,9 +15,7 @@
     <style>
         body { 
             font-family: 'BIZ UDPMincho', serif; font-size: 22px;
-            
             line-height: 1.4; 
-            margin: 0; 
             padding: 40px; 
             color: #1a1a1a;
             background-color:#ff6666
@@ -83,8 +81,6 @@
         /* BASE TAB STYLE */
         .tab-content { 
             display: none; /* Hidden by default */
-            max-width: 850px; 
-            margin: 0 auto; 
             animation: fadeIn 0.4s;
             padding-top: 60px;
         }
@@ -105,36 +101,58 @@
 
 
 
-       /* This rule ONLY applies to the About section */
-		#about.tab-content.active {
-    		display: grid !important;
-    		grid-template-columns: 1fr auto; /* Text fills space, image stays at its size */
-    		align-items: start;
-    		gap: 60px;
-    
-    		/* These lines break the 'centered' rule for this section only */
-    		max-width: 100% !important; 
-    		width: 100% !important;
-    		margin: 0 !important; 
-		}	
-
-        .about-text { text-align: left; line-height: 1.4 !important; padding-left: 30px; text-align: justify; text-justify: inter-word;}
-        .about-image { width: 100%; max-width: 600px; height: auto; justify-self: end; padding-right: 200px;}
-
-        .home-image { position: absolute;  left: 370px; width: auto; height: auto; margin-left: 0 ; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+		.home-image { display: block; margin-left: auto ;margin-right: auto ; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
         
         h1 { position: absolute; left: 140px; font-size: 24px; font-weight: 600; margin-top: 0; margin-bottom: 20px; }
         h2 { font-size: 23px; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
         
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+
+
+
+
+
+
+
+/* This rule ONLY applies to the About section ------------------------------------------------------------*/
+		#about.tab-content.active {
+    		display: grid !important;
+    		grid-template-columns: auto auto; 
+    		gap: 60px; 		
+		}	
+
+                
+        .about-image {display: block; margin-left: auto ;margin-right: auto ; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+/* This rule ONLY applies to the About section ------------------------------------------------------------*/        
+        
+        
+        
+        
+        
+        
+
+        
+
+/*
         @media (max-width: 768px) {
             #about.tab-content.active { grid-template-columns: 1fr; }
             .tab-container { justify-content: center; }
             .tab-button.name-brand { text-align: center; padding-left: 0; }
         }
         
-        /* Styling for the CV Expandable Sections */
+*/        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+ /* Styling for the CV Expandable Sections------------------------------------ */
 		.cv-section {
     		border-bottom: 1px solid #ccc;
     		margin-bottom: 10px;
@@ -181,10 +199,9 @@
 		
 		/* Specifically target the CV section to align it left */
 		#cv.tab-content.active {
-    		margin-left: 0 !important;
-    		margin-right: auto !important;
-    		max-width: 1400px; /* Keeps the text lines from getting too long/hard to read */
-    		text-align: left;
+    		/*margin-left: auto !important;*/
+    		/*margin-right: auto !important;*/
+    		/*text-align: left;*/
     		padding-left: 30px;
     		
 		}
@@ -194,57 +211,24 @@
     		padding-left: 20px;
     		text-align: left;
 		}
+ /* Styling for the CV Expandable Sections------------------------------------ */		
 		
-		/* Research Section Grid */
+		
+		
+		
+		
+		
+		
+/* Research Section Grid---------------------------------------------------------------*/
 		#research.tab-content.active {
-    		display: grid !important;
-    		grid-template-columns: 1fr 900px; /* Text takes available space, Menu takes 400px */
-    		gap: 60px;
-    		align-items: start;
-    		max-width: 100% !important;
-    		width: 100% !important;
-    		margin: 0 !important;
-    		
-    		
+    		/*display: grid;*/
+    		/*grid-template-columns: auto auto; */
+    		gap: 60px;    		
+    		    		
 		}
+				
 		
 		
-		/* Research Section Grid */
-		#lectures.tab-content.active {
-    		display: grid !important;
-    		grid-template-columns: 1fr 900px; /* Text takes available space, Menu takes 400px */
-    		gap: 60px;
-    		align-items: start;
-    		max-width: 100% !important;
-    		width: 100% !important;
-    		margin: 0 !important;
-    		
-    		
-		}
-		
-		#public.tab-content.active {
-    		display: grid !important;
-    		grid-template-columns: 1fr 900px; /* Text takes available space, Menu takes 400px */
-    		gap: 60px;
-    		align-items: start;
-    		max-width: 100% !important;
-    		width: 100% !important;
-    		margin: 0 !important;
-    		
-    		
-		}
-		
-		
-		/* Ensure the text stays left-aligned */
-		.research-text {
-    		text-align: left;
-    		line-height: 1.4;
-    		padding-left: 30px;
-    		text-align: justify; 
-    		text-justify: inter-word;
-		}
-		
-		/* Container for the menus on the right */
 		.research-menu-container {
     		display: flex;
     		flex-direction: column;
@@ -252,13 +236,40 @@
     		padding-right: 60px;
 		}
 		
-		/* Styling the menus to look clean on the right */
 		.research-menu-container .cv-section {
     		border-bottom: 1px solid #ccc;
     		padding-bottom: 8px;
     		width: 100%;
     		
 		}
+	/* Research Section Grid---------------------------------------------------------------*/		
+		
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+		#lectures.tab-content.active {
+    		/*display: grid !important;*/
+    		/*grid-template-columns: auto auto; */
+    		gap: 60px;
+    		
+		}		
+		
+		#public.tab-content.active {
+    		/*display: grid !important;*/
+    		/*grid-template-columns: auto auto; */
+    		gap: 60px;
+    		
+		}
+		
+		
+		
 		
 		
 		.video-container {
@@ -277,7 +288,6 @@
   		
   		.preview-card {
   			display: block;
-  			/*max-width: 500px;*/
   			width: 400px;
   			height: 315px;
   			text-decoration: none;
@@ -360,13 +370,17 @@
   			clear: both;
 			}
 		
-		/* Mobile: Stack them vertically when the screen is small */
+		
+		
+		/* Mobile: Stack them vertically when the screen is small 
 		@media (max-width: 900px) {
     		#research.tab-content.active {
         		grid-template-columns: 1fr !important;
     		}
 		}
 		
+		
+		*/
 		
 </style>
 </head>
@@ -385,6 +399,11 @@
         <button class="tab-button" onclick="openTab(event, 'public')">Public Engagement</button>
        
     </nav>
+    
+    
+    
+    
+    
 
     <div id="home" class="tab-content active">
         <img src="Za sajt_01.png" alt="Ana Hofman" class="home-image">
@@ -396,71 +415,85 @@
     
 
     <div id="about" class="tab-content">
-        <div class="about-text">
-            <h2></h2>
+    
+       
+            
             <p>  
             
             Ana Hofman is an ethnomusicologist and anthropologist whose work explores the intersections of music, sound, and politics in socialist and post-socialist societies. Her research focuses on memory, affect, and activism, as well as on questions of labour, class, gender, political economy, and social movements as they intersect with musical and sonic practices.<br><br>
             
-She has published three monographs: <a href="https://brill.com/display/title/16881" target="_blank"> Staging Socialist Femininity: Gender Politics and Folklore Performances in Serbia (Brill, 2011),</a>, <a href="https://omp.zrc-sazu.si/zalozba/catalog/view/920/3903/430" target="_blank"> Music, Affect, Politics: New Lives of Partisan Songs in Slovenia (ZRC 2015),</a>, translated into Serbian as New Lives of Partisan Songs (Biblioteka XX vek, 2016) and <a href="https://academic.oup.com/book/60031/book-pdf/63065529/9780197576281_web.pdf" target="_blank"> Socialism Now: Singing Activism after Yugoslavia (Oxford University Press, 2025).</a><br><br> 
+She has published three monographs: <a href="https://brill.com/display/title/16881" target="_blank"> Staging Socialist Femininity: Gender Politics and Folklore Performances in Serbia (Brill, 2011),</a> <a href="https://omp.zrc-sazu.si/zalozba/catalog/view/920/3903/430" target="_blank"> Music, Affect, Politics: New Lives of Partisan Songs in Slovenia (ZRC 2015),</a> translated into Serbian as New Lives of Partisan Songs (Biblioteka XX vek, 2016) and <a href="https://academic.oup.com/book/60031/book-pdf/63065529/9780197576281_web.pdf" target="_blank"> Socialism Now: Singing Activism after Yugoslavia (Oxford University Press, 2025).</a><br><br> 
 
 In 2018 she received the Danubius Mid-Career Award by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region. Beyond academia, she has contributed to equal opportunity policy work in Slovenian research institutions, collaborated with activist initiatives across the region, and worked in documentary filmmaking; she appears in and co-wrote the documentary <a href="https://www.youtube.com/watch?v=7tGVGAhLG-c" target="_blank"> Solčence zahaja (2020), trailer.</a><br>
 
-<span id="dots"></span><span id="more"><br>She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). Her recent visiting appointments include Visiting Fellow, Department of Music, King’s College London (Autumn 2025); Fulbright Postdoctoral Fellow, The Graduate Center, City University of New York (2018); and Visiting Lecturer, University of Music and Performing Arts Graz, Austria (Winter semester 2017). She has also held visiting fellowships and research positions at the School of Music, Federal University of Rio de Janeiro (Brazil); the Centre for Southeastern European Studies, University of Graz (Austria); the Russian, East European, and Eurasian Center, University of Illinois Urbana–Champaign (USA); New Europe College (Bucharest, Romania); the Max Planck Institute for Social Anthropology (Halle, Germany); and the Department of Music, University of Chicago (USA).</span>
-                         </p>
-                         <button onclick="myFunction()" id="myBtn">Read more</button>
-        </div>
+<span id="dots"></span><span id="more"><br>She is an Associate Professor at the ZRC SAZU Postgraduate School (Ljubljana). Her recent visiting appointments include Visiting Fellow, Department of Music, King’s College London (Autumn 2025); Fulbright Postdoctoral Fellow, The Graduate Center, City University of New York (2018); and Visiting Lecturer, University of Music and Performing Arts Graz, Austria (Winter semester 2017). She has also held visiting fellowships and research positions at the School of Music, Federal University of Rio de Janeiro (Brazil); the Centre for Southeastern European Studies, University of Graz (Austria); the Russian, East European, and Eurasian Center, University of Illinois Urbana–Champaign (USA); New Europe College (Bucharest, Romania); the Max Planck Institute for Social Anthropology (Halle, Germany); and the Department of Music, University of Chicago (USA).<br></span>  <button onclick="myFunction()" id="myBtn">Read more</button>
+             </p>
+             
+            
+        
+        
         <img src="image2.jpg" alt="Ana Hofman" class="about-image">
+        
     </div>
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     
     
     	<div id="cv" class="tab-content">
     	
     	<p>
     	
-    <h2>Current position:</h2> 
+   			 <h2>Current position:</h2> 
     
 
-	Research advisor, Institute of Cultural and Memory Studies, Scientific Research Center of the Slovenian Academy of Sciences and Arts, Ljubljana, Slovenia<br>
-	Associate professor, ZRC SAZU Postgraduate School<br><br>
+				Research advisor, Institute of Cultural and Memory Studies, Scientific Research Center of the Slovenian Academy of Sciences and Arts, Ljubljana, Slovenia<br>
+				Associate professor, ZRC SAZU Postgraduate School<br><br>
 	
-	<div class="cv-line">
-		</div>
-	<br>
+				<div class="cv-line">
+					</div>
+				<br>
 	
-	<h2>Previous positions:</h2> 
+				<h2>Previous positions:</h2> 
 	
 	
 	
-	Visiting lecturer (2018), Institute of Ethnomusicology, University of Performing Arts, Graz, Austria<br>
-	Assistant Professor (2010-2020), Faculty of Humanities, University of Nova Gorica, Slovenia<br>
-	Assistant Professor (2002-2005), Faculty of Arts, University of Niš, Serbia<br><br>
+				Visiting lecturer (2018), Institute of Ethnomusicology, University of Performing Arts, Graz, Austria<br>
+				Assistant Professor (2010-2020), Faculty of Humanities, University of Nova Gorica, Slovenia<br>
+				Assistant Professor (2002-2005), Faculty of Arts, University of Niš, Serbia<br><br>
 	
-	<div class="cv-line">
-		</div>
+				<div class="cv-line">
+					</div>
 	
-	<br>
+				<br>
 	
-	<h2>Education:</h2> 
+				<h2>Education:</h2> 
 	
 	
 	
 
-	PhD, 2007, Graduate School for Intercultural Studies, University of Nova Gorica, Slovenia Thesis Title: “The Identity Politics and the Female Singers Stage Performances in Niško Polje in the Last Third of the Twentieth Century”<br>
+				PhD, 2007, Graduate School for Intercultural Studies, University of Nova Gorica, Slovenia Thesis Title: “The Identity Politics and the Female Singers Stage Performances in Niško Polje in the Last Third of the Twentieth Century”<br>
 
-	MA, 2005, Gender studies, Faculty of Political sciences, Belgrade, Serbia<br>
+				MA, 2005, Gender studies, Faculty of Political sciences, Belgrade, Serbia<br>
 
-	MPhil, 2004, Faculty of Music, University of Arts, Belgrade, Serbia<br>
+				MPhil, 2004, Faculty of Music, University of Arts, Belgrade, Serbia<br>
 
-	BA, 1999, Faculty of Music, University of Arts, Belgrade, Serbia<br><br>
+				BA, 1999, Faculty of Music, University of Arts, Belgrade, Serbia<br><br>
 	
-	<a href="https://bib.cobiss.net/biblioweb/biblio/si/slv/cris/29339" target="_blank">SICRIS</a>
-	<br>
-	</p>
+				<a href="https://bib.cobiss.net/biblioweb/biblio/si/slv/cris/29339" target="_blank">SICRIS</a>
+				<br>
+		</p>
 		
-		<div class="cv-line">
-		</div>
+				<div class="cv-line">
+					</div>
+    	
     	<div class="cv-section">
         	<details>
             	<summary>Fellowships</summary>
@@ -689,13 +722,12 @@ In 2018 she received the Danubius Mid-Career Award by the Austrian Ministry of E
     
     
     
-    		<div id="research" class="tab-content">
+    <div id="research" class="tab-content">
     		
-    		<div class="research-text">
-        		<h2></h2>
+    	
         		<p>Ana Hofman’s research over the past two decades has traced how politics becomes audible—how collective singing becomes a form of sociopolitical engagement Through long-term, participant-observer involvement with activist singing collectives across the post-Yugoslav region, she has followed how self-organized choirs revive and reinvent repertoires of partisan, revolutionary, and workers’ songs alongside contemporary socially engaged pieces, treating collective singing as a mode of collaboration and political experimentation. This trajectory culminates in the book <i>Socialism Now: Singing Activism after Yugoslavia</i> (Oxford University Press, 2025), where she traces how socialist ideas and lived experiences are being recuperated in the present. She develops the concept of strategic amateurism to grasp how collective singing can organize against the adverse effects of neoliberal capitalism without collapsing into flattened narratives of “music for social change.”
-</p>
-    		</div>
+				</p>
+    	
 		
     		<div class="research-menu-container">
         		
@@ -758,90 +790,82 @@ In 2018 she received the Danubius Mid-Career Award by the Austrian Ministry of E
     <div id="lectures" class="tab-content">
         	    	
     	
-    	<div class="research-text">
+    	
     	
     	<p> Ana Hofman has delivered numerous invited lectures and keynote addresses at universities, research centres, and major scholarly gatherings across Europe, North America, and Latin America. Her talks have been featured at institutions such as Unversity of Chicago, King’s College London, SOAS University of London, the University of Music and Performing Arts Vienna, McGill University, the University of Pittsburgh, the Federal University of Rio de Janeiro, and the University of Hildesheim, among others. She has been a keynote speaker at international conferences and national symposia, addressing themes at the intersection of music, sound, political struggle and affective politics in socialist and postsocialist societies. Her lectures engage questions of musical labor, activism and memory, antifascism, commodification, and the political life of sound, positioning ethnomusicology as a field attentive to both historical remembrance and future-oriented forms of collective imagination.</p>
-    	</div>
+    	
     	
     	
     	<div class="research-menu-container">
     	
     	<div class="cv-section">
-            		<details>
-                		<summary>Videos</summary>
-                		<div class="cv-content">
+            <details>
+                <summary>Videos</summary>
+                	<div class="cv-content">
     	
     	
     	 	
     	 	
-    	 <p><a href="https://youtu.be/n3A_VLfP3Hg" target="_blank"> Lecture in the series “Musical Worlds of Socialist Yugoslavia” (in Slovenian), organized by the Slovenian Musicological Society in collaboration with the Institute of Ethnomusicology ZRC SAZU.</a><br> Title: “Between ‘Shifts’: Musical Life in Yugoslavia between Work and Leisure” (in Slovenian)</p>
+    	 			<p><a href="https://youtu.be/n3A_VLfP3Hg" target="_blank"> Lecture in the series “Musical Worlds of Socialist Yugoslavia” (in Slovenian), organized by the Slovenian Musicological Society in collaboration with the Institute of Ethnomusicology ZRC SAZU.</a><br> Title: “Between ‘Shifts’: Musical Life in Yugoslavia between Work and Leisure” (in Slovenian)</p>
     	 
     	 
-    	 <iframe width="560" height="315" src="https://www.youtube.com/embed/dHWMgTQeLa4?si=Qa0huqVk2D1dayCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    	 			<iframe width="560" height="315" src="https://www.youtube.com/embed/dHWMgTQeLa4?si=Qa0huqVk2D1dayCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     	 
     	
-    	<p><a href="https://www.youtube.com/watch?v=VVxm1f9DlqU" target="_blank"> Keynote at the celebration of the 60th anniversary of the Department for Ethnomusicology, University of Music and Performing Arts, Vienna, 2025</a><br> Title: “Ethnomusicology between Past Remembrance and Future Making, 80 Years After”</p>
+    				<p><a href="https://www.youtube.com/watch?v=VVxm1f9DlqU" target="_blank"> Keynote at the celebration of the 60th anniversary of the Department for Ethnomusicology, University of Music and Performing Arts, Vienna, 2025</a><br> Title: “Ethnomusicology between Past Remembrance and Future Making, 80 Years After”</p>
     	    	
     	
-    		<iframe 
-  			width="560" 
-  			height="315" 
-  			src="https://www.youtube.com/embed/VVxm1f9DlqU" 
-  			title="YouTube video player" 
-  			frameborder="0" 
-  			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-  			referrerpolicy="strict-origin-when-cross-origin" 
-  			allowfullscreen>
-			</iframe>
+    				<iframe width="560" height="315" src="https://www.youtube.com/embed/VVxm1f9DlqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     	
     	
     	
-    	<p><a href="https://mdw.vhx.tv/wissenschaft-und-forschung/videos/mmrc-lecture-2024"> Music and Minorities Research Centre (MMRC), University of Music and Performing Arts,Vienna, annual keynote lecture for 2024</a> Title: “Between Cultural Labor and Political Struggle: Music and Class.” </p>
+    				<p><a href="https://mdw.vhx.tv/wissenschaft-und-forschung/videos/mmrc-lecture-2024"> Music and Minorities Research Centre (MMRC), University of Music and Performing Arts,Vienna, annual keynote lecture for 2024</a> Title: “Between Cultural Labor and Political Struggle: Music and Class.” </p>
     	
-    	<iframe title="vimeo-player" src="https://player.vimeo.com/video/1012657703?h=8a18654259" width="560" height="315" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+    				<iframe title="vimeo-player" src="https://player.vimeo.com/video/1012657703?h=8a18654259" width="560" height="315" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
     		
     	
-    	<p><a href="https://youtu.be/-ZOgOEW3waA" target="_blank"> Culture&Capitalism Seminar, SOAS, University College London, 2022. </a> Title: “Aesthetic solidarities in a devastating world : the im/possibilities of communal forms of life after socialism” </p>
+    				<p><a href="https://youtu.be/-ZOgOEW3waA" target="_blank"> Culture&Capitalism Seminar, SOAS, University College London, 2022. </a> Title: “Aesthetic solidarities in a devastating world : the im/possibilities of communal forms of life after socialism” </p>
     	
-    	<iframe width="560" height="315" src="https://www.youtube.com/embed/-ZOgOEW3waA?si=8leRd3dEkSdcfUHr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    	
-    	
-    	<p><a href="https://www.youtube.com/watch?v=OKr0saA09Jk" target="_blank"> "Participation at the online discussion “Série Música em Debate,”Laboratório de Etnomusicologia, Federal University of Rio de Janeiro UFRJ. 2020."</a></p>
-    	
-    	<p><a href="https://youtu.be/NvH3KX4P4y0" target="_blank"> "New Lives of Partisan Songs  (Novi život partizanskih pesama, Bilbioteka XX vek, 2016), Book promotion, Centre for Cultural Decontamination, Belgade."</a></p>
+    				<iframe width="560" height="315" src="https://www.youtube.com/embed/-ZOgOEW3waA?si=8leRd3dEkSdcfUHr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     	
     	
-    	</div>
-           </details>
-        		</div>
+    				<p><a href="https://www.youtube.com/watch?v=OKr0saA09Jk" target="_blank"> "Participation at the online discussion “Série Música em Debate,”Laboratório de Etnomusicologia, Federal University of Rio de Janeiro UFRJ. 2020."</a></p>
+    	
+    				<p><a href="https://youtu.be/NvH3KX4P4y0" target="_blank"> "New Lives of Partisan Songs  (Novi život partizanskih pesama, Bilbioteka XX vek, 2016), Book promotion, Centre for Cultural Decontamination, Belgade."</a></p>
+    	
+    	
+    		</div>
+          </details>
+        </div>
     	    	
     	    	
     	    	
-    	    	<div class="cv-section">
-            		<details>
-                		<summary>Lectures</summary>
-                		<div class="cv-content">
+    	 <div class="cv-section">
+            <details>
+               <summary>Lectures</summary>
+                <div class="cv-content">
     	    	
     	
-    	<p><b>Lecture at Music Department, King’s College London, 2025.</b><br><a href="https://www.kcl.ac.uk/events/strategic-amateurism-self-organized-choirs-and-the-legacies-of-socialist-cultural-commons" target="_blank"> Title: “Strategic Amateurism: Self-Organized Choirs and the Legacies of Socialist Cultural Commons"</a></p>
+    			<p><b>Lecture at Music Department, King’s College London, 2025.</b><br><a href="https://www.kcl.ac.uk/events/strategic-amateurism-self-organized-choirs-and-the-legacies-of-socialist-cultural-commons" target="_blank"> Title: “Strategic Amateurism: Self-Organized Choirs and the Legacies of Socialist Cultural Commons"</a></p>
     	
-    	<p><b>Keynote at the Finnish national symposium of music scholars, 2024.</b><br><a href="https://sites.uef.fi/symposium-for-music-scholars-2024/?lang=en" target="_blank"> Title: “Music Activism in a Devastating World Sounds of political survival or survival of the political sounds?</a></p>
+    			<p><b>Keynote at the Finnish national symposium of music scholars, 2024.</b><br><a href="https://sites.uef.fi/symposium-for-music-scholars-2024/?lang=en" target="_blank"> Title: “Music Activism in a Devastating World Sounds of political survival or survival of the political sounds?</a></p>
     	
-    	<p><b>Keynote at the Summer Academy of University of Music and Performing Arts Vienna, Reichenau, 2023.</b><br><a href="https://www.isa-music.org/wp-content/uploads/2023/06/Programme_Overview_isaScience2023.pdf" target="_blank"> Title: “Musical Leisure: Sonic Ties against Commodification and Exploitative Forms of Life”</a></p>
+    			<p><b>Keynote at the Summer Academy of University of Music and Performing Arts Vienna, Reichenau, 2023.</b><br><a href="https://www.isa-music.org/wp-content/uploads/2023/06/Programme_Overview_isaScience2023.pdf" target="_blank"> Title: “Musical Leisure: Sonic Ties against Commodification and Exploitative Forms of Life”</a></p>
     	
-    	<p><b>Keynote at the international conference Music and antifascism: reflections on the past and possibilities in the present", McGill University, 2022.</b><br><a href="https://musicandantifascism.wordpress.com/" target="_blank"> Title: “Is antifascism enough? Singing and listening to contested histories and possible futures.” </a></p>
+    			<p><b>Keynote at the international conference Music and antifascism: reflections on the past and possibilities in the present", McGill University, 2022.</b><br><a href="https://musicandantifascism.wordpress.com/" target="_blank"> Title: “Is antifascism enough? Singing and listening to contested histories and possible futures.” </a></p>
     	
-    	<p><b>Keynote at International conference, Loud memories, turbo folks: mapping of the sounds, images and memories in the post Yugoslav space, 2021.</b><br><a href="https://bienale.si/en/news/loud-memories-turbo-people-mapping-of-sound-image-and-remembrance-in-the-post-yugoslav-space/" target="_blank"> Title: “Sound, affect, memory: re-listening to the past.”</a></p>
+    			<p><b>Keynote at International conference, Loud memories, turbo folks: mapping of the sounds, images and memories in the post Yugoslav space, 2021.</b><br><a href="https://bienale.si/en/news/loud-memories-turbo-people-mapping-of-sound-image-and-remembrance-in-the-post-yugoslav-space/" target="_blank"> Title: “Sound, affect, memory: re-listening to the past.”</a></p>
     	
-    	<p><b>Keynote lecture at the event “Balkan music and culture: sounds of past and present,” University of Pittsburgh, Department of Music in Carnegie Mellon University School of Music, Pittsburgh, 2018.</b><br><a href="https://nextpittsburgh.com/events/symposium-dance-party-will-explore-balkan-music-culture/" target="_blank"> Title: “Kafana musicians: music labour in Southeastern Europe between stigmatization and glorification” </a></p>
+    			<p><b>Keynote lecture at the event “Balkan music and culture: sounds of past and present,” University of Pittsburgh, Department of Music in Carnegie Mellon University School of Music, Pittsburgh, 2018.</b><br><a href="https://nextpittsburgh.com/events/symposium-dance-party-will-explore-balkan-music-culture/" target="_blank"> Title: “Kafana musicians: music labour in Southeastern Europe between stigmatization and glorification” </a></p>
     	
-    	<p><b>Keynote lecture at the Center for World Music (CWM) at the Ninth International Doctoral Workshop in Ethnomusicology,  University of Hildesheim & Hanover University of Music, Drama and Media, 2017.</b><br><a href="https://www.uni-hildesheim.de/media/presse/2017_Doctoral_Workshop_Ethnomusicology_Center_for_World_Music_CWM_Uni_Hildesheim_program_and_abstracts.pdf" target="_blank"> Title:  “Sonic regimes of uncertainty : toward affective politics of (self)emancipatory musical alliances” </a></p>
+    			<p><b>Keynote lecture at the Center for World Music (CWM) at the Ninth International Doctoral Workshop in Ethnomusicology,  University of Hildesheim & Hanover University of Music, Drama and Media, 2017.</b><br><a href="https://www.uni-hildesheim.de/media/presse/2017_Doctoral_Workshop_Ethnomusicology_Center_for_World_Music_CWM_Uni_Hildesheim_program_and_abstracts.pdf" target="_blank"> Title:  “Sonic regimes of uncertainty : toward affective politics of (self)emancipatory musical alliances” </a></p>
     	
-    	<p><b>Lecture at the Music Department, the Federal University of Rio de Janeiro, 2016.</b><br>Title: “Música nos Bálcãs : o branding e suas implicações políticas (Balkan music : problematizing politics of branding”</p>
+    			<p><b>Lecture at the Music Department, the Federal University of Rio de Janeiro, 2016.</b><br>Title: “Música nos Bálcãs : o branding e suas implicações políticas (Balkan music : problematizing politics of branding”</p>
     
-    	</div>
-            </details>
-        		</div>
+    		</div>
+           </details>
+        </div>
+        
     
   		</div>
 	</div>
@@ -849,11 +873,11 @@ In 2018 she received the Danubius Mid-Career Award by the Austrian Ministry of E
     
     
     <div id="public" class="tab-content">
-    <div class="public-text">
     
     
-    <p>Ana Hofman regularly contributes to public debates through interviews, podcasts, television appearances, and print media across the post-Yugoslav region and beyond. Her work has been featured in major newspapers and cultural magazines such as El País, Jutarnji list, Vreme, Politika, Dnevnik, and Slovenske novice, as well as on platforms including Eurozine, Balkan Insight, Peščanik, Mašina, and P-portal, where she addresses questions of music, memory, nationalism, antifascism, gender, and political mobilization. She has appeared on national television and radio (RTV Slovenia, RTS) and in international podcasts such as Remembering Yugoslavia, bringing scholarly perspectives on partisan song, activist choirs, and cultural politics into broader public circulation. Her media presence reflects a sustained engagement with contemporary debates on music, sound and politics, value, and collective identity in times of political polarization. In addition to interviews and commentary, she is also active in documentary filmmaking and is the author of the documentary film Solčence zahaja, further extending her research into visual and public formats.</p>
-    	</div>
+    
+    <p>Ana Hofman regularly gives interviews, appears in podcasts, TV and print media across the post-Yugoslav region and beyond. Her work has been featured in major newspapers and cultural magazines such as El País, Jutarnji list, Vreme, Politika, Dnevnik, and Slovenske novice, as well as on platforms including Eurozine, Balkan Insight, Peščanik, Mašina, and P-portal, where she addresses questions of music, memory, nationalism, antifascism, gender, and political mobilization. She has appeared on national television and radio (RTV Slovenia, RTS) and in international podcasts such as Remembering Yugoslavia, bringing scholarly perspectives on partisan song, activist choirs, and cultural politics into broader public circulation. Her media presence reflects a sustained engagement with contemporary debates on music, sound and politics, value, and collective identity in times of political polarization. In addition to interviews and commentary, she is also active in documentary filmmaking and is the author of the documentary film Solčence zahaja, further extending her research into visual and public formats.</p>
+    	
     	
     	
     	
