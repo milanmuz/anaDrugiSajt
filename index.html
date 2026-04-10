@@ -26,10 +26,7 @@
             
         }
         
-        div {
-  		text-align: justify;
-  		text-justify: inter-word;
-		}
+        
         
         .tab-container { 
             display: flex; 
@@ -103,7 +100,7 @@
 
 
 
-		.home-image { display: block; margin-left: auto ;margin-right: auto ; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+		.home-image {display: block; margin-left: auto ;margin-right: auto ; box-shadow: 0 4px 20px rgba(0,0,0,0.1);}
         
         h1 { position: absolute; left: 140px; font-size: 24px; font-weight: 600; margin-top: 0; margin-bottom: 20px; }
         h2 { font-size: 23px; font-weight: 700; margin-top: 0; margin-bottom: 20px; }
@@ -371,16 +368,26 @@
   		color: black;
 		}
 		
-		
+		#imgtest{
+		background-image:url('sajt_01.png')
+		}
 		
 		
 		@media only screen and (min-width:501px) {
 		.topnav { display: none;}
+		div {
+  		text-align: justify;
+  		text-justify: inter-word;
+		}
 		
 		}
 		
 		@media only screen and (max-width:500px) {
   			/* For mobile phones: */
+  			div {
+  		text-align: left;
+  		text-justify: inter-word;
+		}
   			
   			body {
   			font-size: 15px;
@@ -458,12 +465,12 @@
   			<button class="tab-button name-brand active" onclick="openTab(event, 'home')">Ana Hofman</button>
   			<!-- Navigation links (hidden by default) -->
   			<div id="myLinks">
-    			<button class="tab-button" onclick="openTab(event, 'about')">About</button>
-    			<button class="tab-button" onclick="openTab(event, 'cv')">CV</button>
-    			<button class="tab-button" onclick="openTab(event, 'research')">Research</button>
-       			<button class="tab-button" onclick="openTab(event, 'lectures')">Lectures</button>
-        		<button class="tab-button" onclick="openTab(event, 'public')">Public Engagement</button>
-        		<button class="tab-button" onclick="openTab(event, 'contact')">Contact</button>
+    			<button class="tab-button" onclick="openTab(event, 'about'),burger()">About</button><br>
+    			<button class="tab-button" onclick="openTab(event, 'cv'),burger()">CV</button><br>
+    			<button class="tab-button" onclick="openTab(event, 'research'),burger()">Research</button><br>
+       			<button class="tab-button" onclick="openTab(event, 'lectures'),burger()">Lectures</button><br>
+        		<button class="tab-button" onclick="openTab(event, 'public'),burger()">Public Engagement</button><br>
+        		<button class="tab-button" onclick="openTab(event, 'contact'),burger()">Contact</button><br>
   			</div>
   			<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
   			<a href="javascript:void(0);" class="icon" onclick="burger()">
@@ -493,7 +500,18 @@
     
 
     <div id="home" class="tab-content active">
-        <img src="Za sajt_01.png" style="width:100%;" alt="Ana Hofman" class="home-image">
+    
+   <img
+  	srcset="sajt_02.png 480w, sajt_01.png 800w"
+  	sizes="(width <= 600px) 480px,
+         800px"
+  	src="sajt_02.png"
+  	alt="Ana" 
+  	
+  	class="home-image"
+  	/>
+    
+        
     </div>
     
     
@@ -509,7 +527,7 @@
             
             Ana Hofman is an ethnomusicologist and anthropologist whose work explores the intersections of music, sound, and politics in socialist and post-socialist societies. Her research focuses on memory, affect, and activism, as well as on questions of labour, class, gender, political economy, and social movements as they intersect with musical and sonic practices.<br><br>
             
-She has published three monographs: <a href="https://brill.com/display/title/16881" target="_blank"> Staging Socialist Femininity: Gender Politics and Folklore Performances in Serbia (Brill, 2011),</a> <a href="https://omp.zrc-sazu.si/zalozba/catalog/view/920/3903/430" target="_blank"> Music, Affect, Politics: New Lives of Partisan Songs in Slovenia (ZRC 2015),</a> translated into Serbian as New Lives of Partisan Songs (Biblioteka XX vek, 2016) and <a href="https://academic.oup.com/book/60031/book-pdf/63065529/9780197576281_web.pdf" target="_blank"> Socialism Now: Singing Activism after Yugoslavia (Oxford University Press, 2025).</a><br><br> 
+She has published three monographs: <a href="https://brill.com/display/title/16881" target="_blank"> Staging Socialist Femininity: Gender Politics and Folklore Performances in Serbia (Brill, 2011),</a> <a href="https://omp.zrc-sazu.si/zalozba/catalog/view/920/3903/430" target="_blank"> Music, Affect, Politics: New Lives of Partisan Songs in Slovenia (ZRC 2015),</a> translated into Serbian as <a href="https://bibliotekaxxvek.com/hofman-ana-novi-zivot-partizanskih-pesama/" target="_blank"> New Lives of Partisan Songs (Biblioteka XX vek, 2016) </a> and <a href="https://academic.oup.com/book/60031/book-pdf/63065529/9780197576281_web.pdf" target="_blank"> Socialism Now: Singing Activism after Yugoslavia (Oxford University Press, 2025).</a><br><br> 
 
 In 2018 she received the Danubius Mid-Career Award by the Austrian Ministry of Education, Science and Research and the Institute for Central Europe and Danube Region. Beyond academia, she has contributed to equal opportunity policy work in Slovenian research institutions, collaborated with activist initiatives across the region, and worked in documentary filmmaking; she appears in and co-wrote the documentary <a href="https://www.youtube.com/watch?v=7tGVGAhLG-c" target="_blank"> Solčence zahaja (2020), trailer.</a><br>
 
@@ -812,7 +830,7 @@ In 2018 she received the Danubius Mid-Career Award by the Austrian Ministry of E
     <div id="research" class="tab-content">
     		
     	
-        		<p>Ana Hofman’s research over the past two decades has traced how politics becomes audible—how collective singing becomes a form of sociopolitical engagement Through long-term, participant-observer involvement with activist singing collectives across the post-Yugoslav region, she has followed how self-organized choirs revive and reinvent repertoires of partisan, revolutionary, and workers’ songs alongside contemporary socially engaged pieces, treating collective singing as a mode of collaboration and political experimentation. This trajectory culminates in the book <i>Socialism Now: Singing Activism after Yugoslavia</i> (Oxford University Press, 2025), where she traces how socialist ideas and lived experiences are being recuperated in the present. She develops the concept of strategic amateurism to grasp how collective singing can organize against the adverse effects of neoliberal capitalism without collapsing into flattened narratives of “music for social change.”
+        		<p>Ana Hofman’s research over the past two decades has traced how politics becomes audible—how collective singing becomes a form of sociopolitical engagement Through long-term, participant-observer involvement with activist singing collectives across the post-Yugoslav region, she has followed how self-organized choirs revive and reinvent repertoires of partisan, revolutionary, and workers’ songs alongside contemporary socially engaged pieces, treating collective singing as a mode of collaboration and political experimentation. This trajectory culminates in the book <a href="https://global.oup.com/academic/product/socialism-now-9780197576274?cc=si&lang=en&#" target="_blank"> Socialism Now: Singing Activism after Yugoslavia (Oxford University Press, 2025)</a>, where she traces how socialist ideas and lived experiences are being recuperated in the present. She develops the concept of strategic amateurism to grasp how collective singing can organize against the adverse effects of neoliberal capitalism without collapsing into flattened narratives of “music for social change.”
 				</p>
     	
 		
@@ -929,7 +947,7 @@ In 2018 she received the Danubius Mid-Career Award by the Austrian Ministry of E
     	    	
     	 <div class="cv-section">
             <details>
-               <summary>Lectures</summary>
+               <summary>List of Lectures (selection)</summary>
                
     	    	
     	
